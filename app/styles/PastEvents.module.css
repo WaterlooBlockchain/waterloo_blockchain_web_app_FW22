@@ -1,0 +1,28 @@
+.container {
+    width: 70%;
+    height: auto;
+    text-align: left;
+    margin: 5%;
+}
+
+.title {
+    font-family: 'Montserrat Regular';
+    color: #D3BDF4;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.date {
+    font-family: 'Montserrat Regular';
+    font-size: 1em;
+    color: #9866E6;
+    margin-top: 0;
+    margin-bottom: 3%;
+}
+
+.content {
+    font-family: 'Montserrat Light';
+    font-size: 1em;
+    color: #F0E9FB;
+    line-height: 1.5em;
+}

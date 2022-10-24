@@ -1,0 +1,114 @@
+.main {
+    height: 100em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .body {
+      background: linear-gradient(90deg, #180831, #30195d, #7A3ADF, #7A3ADF, #9866E6, #D3BDF4);
+      background-size: 300% 300%;
+      animation: gradient 60s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+.blog_container {
+    margin-top: 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5em;
+}
+
+.featured_container {
+    background-color: #D3BDF4;
+    width: 60em;
+    height: 20em;
+    border-radius: 1em;
+    border-top-left-radius: 1.1em;
+    border-bottom-left-radius: 1.1em;
+    display: flex;
+    column-gap: 3em;
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04);
+}
+
+.featured {
+    background-color: #7A3ADF;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    padding: 0;
+    height: 100%;
+    width: 4em;
+    display: block;
+    position: relative;
+}
+
+.featured > p {
+    transform: rotate(-90deg);
+    font-size: 1.8em;
+    font-family: 'Montserrat Light';
+    color: white;
+    letter-spacing: 0.2em;
+    margin-top: 7.5em;
+}
+
+.content_container {
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    padding-bottom: 2em;
+}
+
+.img_container {
+    width: 17em;
+    height: auto;
+    align-self: center;
+}
+
+.img {
+    border-radius: 1em;
+}
+
+.blog_title {
+    color: #180831;
+    font-family: 'Montserrat Bold';
+    line-height: 1.3em;
+    font-size: 2em;
+}
+
+.content {
+    padding: 0;
+    margin-top: 0;
+    font-family: 'Montserrat Light';
+    font-size: 1em;
+    overflow: auto;
+    white-space: pre-line;
+}
+
+.title {
+    font-family: 'Montserrat Bold';
+    color: #D3BDF4;
+    font-size: 5em;
+    margin: 0;
+}
+
+.blog_grid {
+    width: 80em;
+    height: auto;
+    display: flex;
+    column-gap: 5em;
+    column-count: 3;
+}

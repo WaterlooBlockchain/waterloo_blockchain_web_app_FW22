@@ -1,0 +1,34 @@
+.container {
+    width: 20%;
+    height: auto;
+    margin-top: 5%;
+    margin: 0;
+}
+
+.img_container {
+    width: 80%;
+    height: auto;
+    border-radius: 20%;
+    border: 0.2vw solid #E27876;
+}
+
+.img {
+    border-radius: 20%;
+}
+
+.name {
+    font-family: 'Montserrat Regular';
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #F0E9FB;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-style: italic;
+    margin-top: 0;
+    font-size: 0.75em;
+    color: #F0E9FB;
+    margin-bottom: 10%;
+}
+

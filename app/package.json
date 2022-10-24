@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "net": "^1.0.2",
+    "next": "12.3.1",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "tls": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.21",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1"
+  },
+  "peerDependencies": {
+    "react": "18.2.0"
+  },
+  "type": "module"
+}

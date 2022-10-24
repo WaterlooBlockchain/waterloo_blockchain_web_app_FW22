@@ -1,0 +1,21 @@
+.scroll_to_top {
+    position: fixed;
+    right: 5em;
+    bottom: 7em;
+    font-size: 2em;
+    background-color: #E27876;
+    color: white;
+    cursor: pointer;
+    border-radius: 2em;
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04);
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+}
+  
+.scroll_to_top:hover > .icon {
+    color: #7A3ADF;
+}

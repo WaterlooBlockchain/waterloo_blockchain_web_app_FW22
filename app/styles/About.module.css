@@ -1,0 +1,112 @@
+.main {
+    min-height: auto;
+    min-width: 100em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .body {
+      background: linear-gradient(90deg, #180831, #30195d, #7A3ADF, #7A3ADF, #9866E6, #D3BDF4);
+      background-size: 300% 300%;
+      animation: gradient 60s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+.content {
+    width: 80em;
+    height: auto;
+    color: #F0E9FB;
+    text-align: left;
+}
+
+.title {
+    font-family: 'Montserrat Regular';
+    font-size: 3em;
+    color: #F0E9FB;
+    text-shadow: 0px 2.92736px 5.85472px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    margin-top: 5em;
+}
+
+.text {
+    width: 60em;
+    font-family: 'Montserrat Light';
+    font-size: 1em;
+    line-height: 150%;
+    margin-bottom: 0;
+}
+
+.sponser_container {
+    width: 80em;
+    height: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.panel_container {
+	margin-top: 5em;
+	width: 80em;
+    height: auto;
+	display: flex;
+	column-count: 3;
+	column-gap: 4em;
+	align-items: center;
+	justify-items: center;
+    margin-bottom: 0;
+}
+
+
+.icon {
+	width: 2em;
+	height: auto;
+}
+
+
+.past_events_container {
+    width: 80em;
+	height: auto;
+    margin-top: 5em;
+}
+
+.past_events_container > h1 {
+    font-family: 'Montserrat Regular';
+    font-size: 3em;
+    color: #F0E9FB;
+}
+
+.past_events {
+    width: 80em;
+	height: auto;
+	margin-bottom: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background: #2C1C4B;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+}
+
+
+.footer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+}

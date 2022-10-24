@@ -1,0 +1,170 @@
+.container {
+	min-width: 100em;
+	height: auto;
+}
+
+.main {
+  min-width: 100em;
+  min-height: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+	min-width: 100em;
+	height: auto;
+	background: linear-gradient(90deg, #180831, #30195d, #7A3ADF, #7A3ADF, #9866E6, #D3BDF4);
+	background-size: 300% 300%;
+	animation: gradient 60s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.intro {
+	width: 40em;
+	height: auto;
+	color: #F0E9FB;
+	text-shadow: 0px 2.92736px 5.85472px rgba(0, 0, 0, 0.25);
+	margin-top: 15em;
+	margin-right: 40em;
+}
+
+.blockchain {
+	font-family: 'Montserrat Bold';
+	font-size: 4em;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	margin-top: 10%;
+	margin-bottom: 0;
+}
+
+.uwaterloo {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: 'Montserrat Bold';
+	font-size: 7em;
+}
+
+.discord {
+	background: #E27876;
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 1em;
+	width: 24em;
+	height: 4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;  
+	margin-top: 2%;
+}
+
+.discord_text {
+	font-family: 'Montserrat Bold';
+	font-size: 1.5em;
+}
+
+.discord_icon {
+	width: 2em;
+	height: auto;
+	margin-left: 0.25em;
+	margin-top: 0.1em;
+}
+
+.discord:hover {
+	cursor: pointer;
+}
+
+.discord:hover > .discord_text {
+	font-size: 1.65em;
+	transition-duration: 0.3s;
+}
+
+.read_article {
+	width: 10em;	
+	height: auto;
+	margin-top: 0em;
+	margin-left: 20em;
+}
+
+.main_post {
+	margin-top: -30em;
+	margin-left: 55em;
+}
+
+.see_more_posts {
+	text-align: right;
+	color: #F0E9FB;
+	font-family: 'Montserrat Light';
+	font-size: 1em;
+	margin-top: 1em;
+	margin-bottom: 5em;
+}
+
+.about_container {
+	width: 80em;
+	height: auto;
+	color: #F0E9FB;
+}
+
+.title {
+	font-family: 'Montserrat Regular';
+	font-size: 2.5em;
+	color: #F0E9FB;
+}
+
+.about_content {
+	width: 60em;
+	font-family: 'Montserrat Light';
+	font-weight: 500;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.panel_container {
+	margin-top: 5em;
+	width: 80em;
+	display: flex;
+	column-count: 3;
+	column-gap: 4em;
+	align-items: center;
+	justify-items: center;
+}
+
+.icon {
+	width: 2em;
+	height: auto;
+}
+
+
+.blog_container {
+	width: 80em;
+	height: auto;
+	margin-top: 5em;
+}
+
+.blogs {
+	width: 100%;
+	margin-top: 5em;
+	display: flex;
+	column-gap: 5em;
+}
+
+.news_container {
+	width: 80em;
+	height: auto;
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+

@@ -1,0 +1,56 @@
+.header_flex {
+    min-width: 100em;
+    display:flex;
+    column-gap: 8em;
+    font-family: 'Montserrat Bold';
+    font-weight: 600;
+    color: white;
+    top: 2em;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex_row {
+    text-decoration: none;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 0% 0.1em;
+    background-position-y: 80%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: 0.4s ease-in-out;
+}
+
+
+.flex_row:hover {
+    cursor: pointer;
+    background-size: 100% 0.1em;
+}
+
+.flex_row_icon {
+    width: 5em;
+    height: auto;
+}
+
+.flex_row_icon:hover {
+    cursor: pointer;
+}
+
+.active {
+    text-decoration: none;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 100% 0.1em;
+    background-position-y: 80%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+}
+
+.user {
+    color: white;
+    font-size: 2em;
+}
+
+.user:hover {
+    cursor: pointer; 
+}
+
