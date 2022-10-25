@@ -1,8 +1,7 @@
 .footer {
     width: 100%;
-    max-width: 100vw;
     height: auto;
-    position: absolute;
+    position: relative;
     background-color:#2C1C4B;
     display: flex;
     column-gap: 3em;

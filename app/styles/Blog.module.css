@@ -1,6 +1,6 @@
 .main {
     height: auto;
-    max-width: 100vw;
+    min-width: 100em;
     flex: 1;
     display: flex;
     flex-direction: column;

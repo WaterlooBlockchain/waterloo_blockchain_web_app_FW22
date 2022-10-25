@@ -113,10 +113,10 @@ export default function Home() {
             <div className={styles.see_more_posts}>
               <Link href='/blog'>See More Posts &gt;</Link>
             </div>
-          </div>
+          </div>  
+          <ScrollToTop className={styles.scroll}></ScrollToTop>
+          <Footer></Footer>
       </main>
-      <ScrollToTop className={styles.scroll}></ScrollToTop>
-        <Footer></Footer>
       </div>
     </div>
   )

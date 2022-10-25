@@ -50,9 +50,10 @@ export default function Connect() {
             <div className={styles.sponser_container}>
             <Sponser></Sponser>
             </div>
-          </main>
+            
           <ScrollToTop></ScrollToTop>
           <Footer></Footer>
+          </main>
           </div>
         </div>
       )

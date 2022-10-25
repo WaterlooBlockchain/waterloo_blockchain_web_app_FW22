@@ -73,11 +73,9 @@ export default function About() {
             <div className={styles.sponser_container}>
               <Sponser></Sponser>
             </div>
-          </main>
-          <div className={styles.footer}>
             <ScrollToTop className={styles.scroll}></ScrollToTop>
             <Footer />
-          </div>
+          </main>
           </div>
         </div>
       )

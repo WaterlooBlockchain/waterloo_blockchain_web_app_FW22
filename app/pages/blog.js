@@ -66,9 +66,9 @@ export default function About() {
             ></Post>
               </div>
             </div>
-          </main>
-          <ScrollToTop></ScrollToTop>
+            <ScrollToTop></ScrollToTop>
           <Footer></Footer>
+          </main>
           </div>
         </div>
       )
