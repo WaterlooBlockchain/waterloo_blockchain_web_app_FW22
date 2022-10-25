@@ -37,7 +37,7 @@ export default function Connect() {
               <FaLinkedin></FaLinkedin><a href='https://www.linkedin.com/company/uwblockchainclub/' target="_blank" rel="noreferrer">University of Waterloo Blockchain Club</a>
               </div>
             </div>
-            <h1 className={styles.partnership_title}>Our Partnerships</h1>
+            <h1 className={styles.partnership_title}>Past Partnerships</h1>
             <div className={styles.partnership_container}>
               <Partnership src='/binance.svg' link='https://www.binance.com/en'></Partnership>
               <Partnership src='https://assets.website-files.com/62cf2791756a0740d63fff00/6305b597261554d0fa0058a4_Mark-Solid-Grey.png' name='Sonr' link='https://sonr.io/'></Partnership>

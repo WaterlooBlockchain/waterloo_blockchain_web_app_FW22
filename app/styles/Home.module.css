@@ -4,7 +4,7 @@
 }
 
 .main {
-  min-width: 100em;
+  max-width: 100vw;
   min-height: auto;
   flex: 1;
   display: flex;
@@ -129,7 +129,7 @@
 	font-family: 'Montserrat Light';
 	font-weight: 500;
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 1.7em;
 }
 
 .panel_container {

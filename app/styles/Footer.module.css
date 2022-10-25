@@ -1,6 +1,6 @@
 .footer {
-    min-width: 100%;
-    width: 100em;
+    width: 100%;
+    max-width: 100vw;
     height: auto;
     position: absolute;
     background-color:#2C1C4B;
