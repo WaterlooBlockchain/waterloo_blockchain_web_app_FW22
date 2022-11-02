@@ -12,7 +12,6 @@ export default function About() {
           <Head>
             <title>Create Next App</title>
             <meta name="description" content="UW Blockchain Club Blog" />
-            <link rel="icon" href="/uw_blockchain.png" />
           </Head>
           <div className={styles.body}>
            <main className={styles.main}>

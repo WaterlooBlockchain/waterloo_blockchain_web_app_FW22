@@ -29,21 +29,32 @@ a {
 
 
 @font-face {
-  font-family: 'Montserrat Regular';
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+
   src: url('/fonts/Montserrat-VariableFont_wght.ttf');
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Montserrat Bold';
+   font-family: 'Montserrat', sans-serif;
+
+
+    font-weight: 400;
+
+
   src: url('/fonts/Montserrat-VariableFont_wght.ttf');
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Montserrat Light';
+  font-family: 'Montserrat', sans-serif;
+
+;
+    font-weight: 400;
   src: url('/fonts/Montserrat-VariableFont_wght.ttf');
-  font-weight: 400;
+      font-weight: 400;
 }
 
 ::-webkit-scrollbar {
