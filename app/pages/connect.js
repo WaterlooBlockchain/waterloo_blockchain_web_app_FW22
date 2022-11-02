@@ -38,7 +38,7 @@ export default function Connect() {
             </div>
             <h1 className={styles.partnership_title}>Past Partnerships</h1>
             <div className={styles.partnership_container}>
-              <Partnership src='/binance.svg' link='https://www.binance.com/en'></Partnership>
+              <Partnership src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Binance_logo.svg/632px-Binance_logo.svg.png?20180320203109' link='https://www.binance.com/en'></Partnership>
               <Partnership src='https://assets.website-files.com/62cf2791756a0740d63fff00/6305b597261554d0fa0058a4_Mark-Solid-Grey.png' name='Sonr' link='https://sonr.io/'></Partnership>
               <Partnership src='https://docs.axelar.dev/_next/image?url=%2Flogo%2Flogo.png&w=32&q=75' name='Axelar' link='https://axelar.network/'></Partnership>
               <Partnership src='https://learnweb3.io/brand/logo-blue.png' link='https://learnweb3.io/'></Partnership>
