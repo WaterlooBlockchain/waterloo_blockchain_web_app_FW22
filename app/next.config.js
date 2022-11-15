@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
-
-const isDev = process.env.NODE_ENV === 'development'
-
 const nextConfig = {
-  assetPrefix: isDev ? './' : 'https://csclub.uwaterloo.ca/~uwblockchain/',
+  assetPrefix: './',
   reactStrictMode: true,
   swcMinify: true, 
   images: {
