@@ -17,6 +17,7 @@ export default function About() {
           <Head>
             <title>About UW Blockchain</title>
             <meta name="description" content="About the University of Waterloo Blockchain Club" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/uw_blockchain.png" />
           </Head>
           <div className={styles.body} id={styles.body_id}>

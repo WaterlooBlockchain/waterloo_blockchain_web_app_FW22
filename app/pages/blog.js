@@ -10,8 +10,9 @@ export default function About() {
     return (
         <div className={styles.container}>
           <Head>
-            <title>Create Next App</title>
+            <title>UW Blockchain Blog</title>
             <meta name="description" content="UW Blockchain Club Blog" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/uw_blockchain.png" />
           </Head>
           <div className={styles.body}>
