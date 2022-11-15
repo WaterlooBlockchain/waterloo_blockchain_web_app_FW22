@@ -24,19 +24,13 @@
 
 
 .subheader {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-
+    font-family: 'Montserrat Regular';
     font-size: 1em;
     margin-bottom: 0.3em;
 }
 
 .title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-
+    font-family: 'Montserrat Regular';
     font-size: 2em;
     margin-top: 0;
     margin-bottom: 0em;
@@ -48,10 +42,7 @@
 }
 
 .content {
-    font-family: 'Montserrat', sans-serif;
-
-;
-    font-weight: 400;
+    font-family: 'Montserrat Light';
     color: #D3BDF4;
     width: 18em;
     margin-top: 0;

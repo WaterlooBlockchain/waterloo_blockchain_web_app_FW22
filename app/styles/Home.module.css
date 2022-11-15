@@ -38,12 +38,7 @@
 }
 
 .blockchain {
-	 font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+	font-family: 'Montserrat Bold';
 	font-size: 4em;
 	font-weight: 300;
 	letter-spacing: 0.1em;
@@ -54,12 +49,7 @@
 .uwaterloo {
 	margin-top: 0;
 	margin-bottom: 0;
-	 font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+	font-family: 'Montserrat Bold';
 	font-size: 7em;
 }
 
@@ -76,12 +66,7 @@
 }
 
 .discord_text {
-	 font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+	font-family: 'Montserrat Bold';
 	font-size: 1.5em;
 }
 
@@ -116,8 +101,7 @@
 .see_more_posts {
 	text-align: right;
 	color: #F0E9FB;
-	font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+	font-family: 'Montserrat Light';
 	font-size: 1em;
 	margin-top: 1em;
 	margin-bottom: 5em;
@@ -130,17 +114,14 @@
 }
 
 .title {
- 	font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
+	font-family: 'Montserrat Regular';
 	font-size: 2.5em;
 	color: #F0E9FB;
 }
 
 .about_content {
 	width: 60em;
-	font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+	font-family: 'Montserrat Light';
 	font-weight: 500;
 	font-size: 1em;
 	line-height: 1.7em;

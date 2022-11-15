@@ -14,6 +14,7 @@ export default function Connect() {
           <Head>
             <title>Contact UW Blockchain</title>
             <meta name="description" content="Contact the University of Waterloo Blockchain Club" />
+            <link rel="icon" href="/uw_blockchain.png" />
           </Head>
           <div className={styles.body}>
            <main className={styles.main}>

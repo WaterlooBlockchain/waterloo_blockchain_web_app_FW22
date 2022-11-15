@@ -22,31 +22,20 @@
 }
 
 .title {
-     font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+    font-family: 'Montserrat Bold';
     font-size: 2em;
     color: #180831;
 }
 
 .text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-
+    font-family: 'Montserrat Regular';
     font-size: 1em;
     line-height: 1.4em;
     color: #180831;
 }
 
 .download {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-
+    font-family: 'Montserrat Regular';
     font-size: 1em;
     color: #180831;
     border-bottom: 0.15em solid #180831;

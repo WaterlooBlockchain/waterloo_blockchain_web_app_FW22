@@ -27,10 +27,7 @@
 }
 
 .uwaterloo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-
+    font-family: 'Montserrat Regular';
     font-size: 2em;
     margin-top: 0;
     margin-bottom: 0;
@@ -38,10 +35,7 @@
 
 .c {
     font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
-
-;
-    font-weight: 400;
+    font-family: 'Montserrat Light';
 }
 
 .line {
@@ -49,12 +43,7 @@
 }
 
 .blockchain {
-     font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+    font-family: 'Montserrat Bold';
     margin-top: 0;
     font-size: 2.5em;
 }

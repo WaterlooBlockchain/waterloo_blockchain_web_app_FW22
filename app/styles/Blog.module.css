@@ -60,10 +60,7 @@
 .featured > p {
     transform: rotate(-90deg);
     font-size: 1.8em;
-    font-family: 'Montserrat', sans-serif;
-
-;
-    font-weight: 400;
+    font-family: 'Montserrat Light';
     color: white;
     letter-spacing: 0.2em;
     margin-top: 7.5em;
@@ -88,12 +85,7 @@
 
 .blog_title {
     color: #180831;
-     font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+    font-family: 'Montserrat Bold';
     line-height: 1.3em;
     font-size: 2em;
 }
@@ -101,22 +93,14 @@
 .content {
     padding: 0;
     margin-top: 0;
-    font-family: 'Montserrat', sans-serif;
-
-;
-    font-weight: 400;
+    font-family: 'Montserrat Light';
     font-size: 1em;
     overflow: auto;
     white-space: pre-line;
 }
 
 .title {
-     font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+    font-family: 'Montserrat Bold';
     color: #D3BDF4;
     font-size: 5em;
     margin: 0;

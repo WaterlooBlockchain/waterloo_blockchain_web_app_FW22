@@ -60,12 +60,7 @@
     background: #D3BDF4;
     border-radius: 22.073px;
     color: #7A3ADF;
-     font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+    font-family: 'Montserrat Bold';
     font-weight: 600;
     font-size: 0.75em;
     padding-left: 0.8em;
@@ -101,12 +96,7 @@
 
 .title {
     width: 100%;
-     font-family: 'Montserrat', sans-serif;
-
-
-    font-weight: 400;
-
-
+    font-family: 'Montserrat Bold';
     font-weight: 700;
     font-size: 1.3em;
     line-height: 1.1em;
@@ -118,10 +108,7 @@
 .content {
     width: 100%;
     height: auto;
-    font-family: 'Montserrat', sans-serif;
-
-;
-    font-weight: 400;
+    font-family: 'Montserrat Light';
     font-style: normal;
     font-size: 1em;
     margin-top: 5%;
