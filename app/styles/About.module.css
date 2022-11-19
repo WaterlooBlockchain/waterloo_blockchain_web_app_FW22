@@ -103,14 +103,6 @@
     border-radius: 1em;
 }
 
-.event_image_container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    column-gap: 2em;
-    align-items: center;
-}
-
 .event_image {
     width: 30em;
     height: auto;

@@ -60,13 +60,8 @@ export default function About() {
                   date='11/17/2022'
                   content='150+ attendees! UW Blockchain Club hosted one of the largest events on Binance Academy&apos;s University tour across North America. The event covered the necessity for Decentralized Finance applications, tools for building on BNB Chain, and opportunities for our members to get involved with Binance.'
             />
-            <div className={styles.event_image_container}>
             <div className={styles.event_image}>
               <Image src='/binanceEvent.jpg' width={4000} height={3000} layout='responsive' alt='binance event photo'></Image>
-            </div>
-            <div className={styles.event_image}>
-              <Image src='/binanceTeam.png' width={691} height={411} layout='responsive' alt='binance event photo'></Image>
-            </div>
             </div>
             <PastEvents 
               title='Encode DeFi-101'
