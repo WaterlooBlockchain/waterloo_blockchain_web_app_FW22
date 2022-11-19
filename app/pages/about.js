@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Header from "../components/Header"
 import styles from '../styles/About.module.css'
 
@@ -54,21 +55,34 @@ export default function About() {
             <div className={styles.past_events_container}>
             <h1>Our Past Events</h1>
             <div className={styles.past_events}>
+            <PastEvents 
+                  title='Binance Academy University Tour - UWaterloo'
+                  date='11/17/2022'
+                  content='150+ attendees! UW Blockchain Club hosted one of the largest events on Binance Academy&apos;s University tour across North America. The event covered the necessity for Decentralized Finance applications, tools for building on BNB Chain, and opportunities for our members to get involved with Binance.'
+            />
+            <div className={styles.event_image_container}>
+            <div className={styles.event_image}>
+              <Image src='/binanceEvent.jpg' width={4000} height={3000} layout='responsive' alt='binance event photo'></Image>
+            </div>
+            <div className={styles.event_image}>
+              <Image src='/binanceTeam.png' width={691} height={411} layout='responsive' alt='binance event photo'></Image>
+            </div>
+            </div>
+            <PastEvents 
+              title='Encode DeFi-101'
+              date='10/03/2022'
+              content='This week, Encode workshop is teaching you all about Decentralized Finance! What&apos;s DeFi? Come find out!'
+            />
               <PastEvents 
-                title='Encode DeFi-101'
-                date='10/03/2022'
-                content='This week, Encode workshop is teaching you all about Decentralized Finance! What&apos;s DeFi? Come find out!'
-              />
-               <PastEvents 
-                title='Building a Tax Token on Ethereum'
-                date='10/01/2022'
-                content='If you are worried about not having the skill set to follow along the workshop, no worries. This workshop is made with beginners in mind. This easy to follow workshop will have you making a tax token on Ethereum in no time!'
-              />
-                <PastEvents 
-                title='The Merge Crypto Dinner'
-                date='09/16/2022'
-                content='A UWBC X RBC event. After years of waiting, the Merge is finally here! What a better way to celebrate than in Waterloo, the home of Vitalik!'
-              />
+              title='Building a Tax Token on Ethereum'
+              date='10/01/2022'
+              content='If you are worried about not having the skill set to follow along the workshop, no worries. This workshop is made with beginners in mind. This easy to follow workshop will have you making a tax token on Ethereum in no time!'
+            />
+            <PastEvents 
+              title='The Merge Crypto Dinner'
+              date='09/16/2022'
+              content='A UWBC X RBC event. After years of waiting, the Merge is finally here! What a better way to celebrate than in Waterloo, the home of Vitalik!'
+            />
             </div>
             </div>
             <div className={styles.sponser_container}>

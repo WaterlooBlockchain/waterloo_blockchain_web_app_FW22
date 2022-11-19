@@ -30,11 +30,14 @@ export default function Home() {
         <div className={styles.intro}>
           <h1 className={styles.blockchain}>BLOCKCHAIN @</h1>
           <h1 className={styles.uwaterloo}>UWaterloo</h1>
-          <div className={styles.discord}>
-              <Link href='https://discord.gg/Wk8n4MTMwf'><p className={styles.discord_text}>Join the Community</p></Link>
+          <div className={styles.button}>
+              <a href='https://discord.gg/Wk8n4MTMwf' target="_blank" rel="noreferrer" className={styles.button_text}>Join the Community</a>
               <div className={styles.discord_icon} >
                 <Link href='https://discord.gg/Wk8n4MTMwf' ><FaDiscord className={styles.discord_icon} /></Link>
               </div>
+          </div>
+          <div className={styles.button}>
+              <a href='https://blockchain-group.cs.uwaterloo.ca/openproject/' target="_blank" rel="noreferrer" className={styles.button_text}>Visit our OpenProject</a>
           </div>
         </div>
         <div className={styles.read_article}><Image src='/read_article.png' width={1800} height={1700} layout={'responsive'}></Image></div>
