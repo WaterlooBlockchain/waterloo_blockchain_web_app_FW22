@@ -37,7 +37,7 @@ export default function Home() {
               </div>
           </div>
           <div className={styles.button}>
-              <a href='https://blockchain-group.cs.uwaterloo.ca/openproject/' target="_blank" rel="noreferrer" className={styles.button_text}>Visit our OpenProject</a>
+              <a href='https://vote.uwblockchain.ca/#/' target="_blank" rel="noreferrer" className={styles.button_text}>Vote on Proposals</a>
           </div>
         </div>
         <div className={styles.read_article}><Image src='/read_article.png' width={1800} height={1700} layout={'responsive'}></Image></div>
