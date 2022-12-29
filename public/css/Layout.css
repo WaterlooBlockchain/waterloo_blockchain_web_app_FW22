@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5em;  
+}
+
+.header {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  ::-webkit-scrollbar-track {
+    background: #2C1C4B;
+}
+  
+  ::-webkit-scrollbar-thumb {
+    background: #7A3ADF;
+}
+  

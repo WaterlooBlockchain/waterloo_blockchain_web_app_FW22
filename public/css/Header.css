@@ -1,0 +1,65 @@
+.header_flex {
+    display:flex;
+    column-gap: 8em;
+    top: 2em;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+}
+
+.flex_text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.flex_row {
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: 0.4s ease-in-out;
+    text-decoration: none;
+}
+
+
+.flex_row:hover {
+    cursor: pointer;
+    background-size: 100% 0.1em;
+}
+
+.flex_text:active {
+    text-decoration: none;
+}
+
+.flex_row_icon {
+    width: 5em;
+    height: auto;
+}
+
+.flex_row_icon:hover {
+    cursor: pointer;
+}
+
+.active {
+    text-decoration: none;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 100% 0.1em;
+    background-position-y: 80%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+}
+
+.user {
+    color: white;
+    font-size: 2em;
+}
+
+.user:hover {
+    cursor: pointer; 
+}
+

@@ -1,0 +1,75 @@
+.footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color:#2C1C4B;
+    display: flex;
+    column-gap: 3em;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+.left_div {
+    display: flex;
+}
+
+.logo {
+    margin-top: 2em;
+    width: 4.5em;
+}
+.text {
+    color: #F0E9FB;
+    margin-left: 1em;
+}
+
+.uwaterloo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.c {
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.line {
+    display: inline-flex;
+}
+
+.blockchain {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.socials {
+    width: auto;
+    display: inline-flex;
+    margin-left: 5em;
+}
+
+.socials_button {
+    width: 4em;
+    height: 4em;
+    margin-right: 2em;
+    background-color: #E27876;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icons {
+    color: #F0E9FB;
+}
+
+.icons:hover {
+    cursor: pointer;
+}
+
