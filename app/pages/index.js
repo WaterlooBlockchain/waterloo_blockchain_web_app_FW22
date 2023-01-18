@@ -15,6 +15,7 @@ import Panel from '../components/Panel.js'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
 
+// Deploy
 export default function Home() {
   return (
     <div className={styles.container}>
