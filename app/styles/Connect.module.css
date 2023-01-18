@@ -1,5 +1,5 @@
 .main {
-    min-width: 100em;
+    width: 100%;
     height: auto;
     flex: 1;
     display: flex;
