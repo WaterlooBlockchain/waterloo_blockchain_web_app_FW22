@@ -1,0 +1,46 @@
+.sponsor_container {
+    width: 50em;
+    height: 17em;
+    display: inline-flex;
+    background-color: #F0E9FB;
+    border-radius: 1em;
+    padding: 1em;
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor_img {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.sponsor_content {
+    margin-left: 5%;
+    width: 60%;
+    max-height: auto;
+}
+
+.sponsor_title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 2em;
+    color: #180831;
+}
+
+.sponsor_text {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #180831;
+}
+
+.sponsor_download {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1em;
+    color: #180831;
+    border-bottom: 0.15em solid #180831;
+    text-decoration: none;
+}

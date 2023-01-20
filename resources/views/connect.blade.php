@@ -58,4 +58,5 @@
             'name' => ''
         ])
     </div>
+    @include('components.sponsorship')
 </div>

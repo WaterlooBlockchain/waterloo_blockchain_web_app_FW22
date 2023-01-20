@@ -32,7 +32,7 @@
     <div class="past_events_container">
         <h1 class="past_events_title">Our Past Events</h1>
         <div class="past_events_content">
-        
         </div>
     </div>
+    @include('components.sponsorship')
 </div>
