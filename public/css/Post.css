@@ -15,7 +15,7 @@
 .container_dark {
     min-width: 25em;
     width: 27.5%;
-    max-height: 40%;
+    max-height: 50%;
     background: #2C1C4B;
     box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04);
     border-radius: 1em;
@@ -27,6 +27,7 @@
 
 .body_dark {
     width: 90%;
+    height: 50%;
     margin-left: 5%;
     margin-right: 5%;
     min-height: 60%;
@@ -40,7 +41,7 @@
 
 .body_light {
     width: 90%;
-    height: 58%;
+    height: 60%;
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 0.5em;
@@ -54,6 +55,7 @@
 
 .img {
     width: 100%;
+    min-height: 35%;
     height: auto;
     margin-top: -4em;
 }

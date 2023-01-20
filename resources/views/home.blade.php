@@ -66,7 +66,7 @@
           <div class="blogs">
           @include('components.post', [
                 'theme' => 'dark',
-                'src' => asset('images//web.jpg'),
+                'src' => asset('images/web.jpg'),
                 'title' => 'Web 2.0 vs Web 3.0',
                 'tags' => ['#Blockchain', '#Web2' , '#Web3'],
                 'content' => 'Web 2.0 and Web 3.0 are successive iterations of the web. Web 2.0 is the version that most people know and use today, which is the internet. The internet is where companies provide services to users in exchange for their data.
