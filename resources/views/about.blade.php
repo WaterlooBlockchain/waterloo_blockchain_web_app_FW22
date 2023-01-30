@@ -32,6 +32,13 @@
     <div class="past_events_container">
         <h1 class="past_events_title">Our Past Events</h1>
         <div class="past_events_content">
+            @foreach ($events as $event)
+                @include('components.past_events', [
+                    'title' => $event->title,
+                    'date' => $event->date,
+                    'content' => $event->content
+                ])
+            @endforeach
         </div>
     </div>
     @include('components.sponsorship')

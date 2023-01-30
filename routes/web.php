@@ -31,5 +31,5 @@ Route::get('/connect', function () {
     return view('connect');
 });
 
-Route::resource('/past_events', 'PastEventsController');
+Route::resource('/about', 'App\Http\Controllers\PastEventsController');
 
