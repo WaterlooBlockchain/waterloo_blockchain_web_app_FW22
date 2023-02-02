@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $sql = file_get_contents(database_path('seeds/blogs.sql'));
+        $sql = file_get_contents(database_path('seeds/blog_posts.sql'));
         DB::unprepared($sql);
     }
 }

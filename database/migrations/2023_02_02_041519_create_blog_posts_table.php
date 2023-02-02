@@ -6,11 +6,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
 
-class CreateBlogsTable extends Migration
+class CreateBlogPostsTable extends Migration
 {
     public function up()
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('blog_posts', function (Blueprint $table) {
             $table->uuid()->default(DB::raw('uuid()'));
             $table->text('title');
             $table->boolean('isFeatured');

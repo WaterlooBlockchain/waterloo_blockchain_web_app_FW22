@@ -1,38 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Blog;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View
      */
     public function index()
     {
-        $blogs = DB::table('blog')->get();
-        $view = view('blogs.index', compact('blogs'));
-
-        return response($view);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Blog  $blog
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Blog $blog)
-    {
-        $blogs = DB::table('blog')
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-        return view('blogs.index', compact('blogs'));
+        $blog_posts = DB::table('blog_posts')->get();
+        
+        return View::make('Blog')
+            ->with('blog_posts', $blog_posts);
     }
 }
