@@ -15,11 +15,9 @@ class PastEventsController extends Controller
      */
     public function index()
     {
-        $users = DB::table('past_events')->get();
+        $events = DB::table('past_events')->get();
 
-        $view = view('past_events.index', ['past_events' => $users]);
-
-        return response($view);
+        return view('about', ['events' => $events]);
     }
 
     /**

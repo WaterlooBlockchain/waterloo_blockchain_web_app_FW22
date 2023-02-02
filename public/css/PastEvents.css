@@ -1,0 +1,32 @@
+.past_event_container {
+    width: 75%;
+    height: auto;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.past_event_title {
+    font-family: 'Montserrat', sans-serif;
+    color: #D3BDF4;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0em;
+}
+
+.past_event_date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 550;
+    color: #9866E6;
+    margin-top: 0;
+    margin-bottom: 3%;
+}
+
+.past_event_content {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-top: 0;
+    line-height: 1.5em;
+    font-size: 1em;
+}
