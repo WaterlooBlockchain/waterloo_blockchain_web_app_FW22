@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,19 +18,16 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 Route::get('/about', function () {
     return view('about');
 });
-
-Route::get('/blog', function () {
-    return view('blog');
-});
-
 
 Route::get('/connect', function () {
     return view('connect');
 });
 
-Route::resource('/about', 'App\Http\Controllers\PastEventsController');
+Route::resources([
+    'past_events' => 'App\Http\Controllers\PastEventsController');
+    'blog' => BlogController::class
+]);
 
