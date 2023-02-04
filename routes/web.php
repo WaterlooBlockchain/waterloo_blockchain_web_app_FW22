@@ -27,7 +27,7 @@ Route::get('/connect', function () {
 });
 
 Route::resources([
-    'past_events' => 'App\Http\Controllers\PastEventsController');
+    'past_events' => 'App\Http\Controllers\PastEventsController',
     'blog' => BlogController::class
 ]);
 
