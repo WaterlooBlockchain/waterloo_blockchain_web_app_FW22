@@ -1,24 +1,17 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 5em;  
+    width: 100%;
 }
 
 .header {
     width: 100%;
-    height: auto;
 }
 
 .content {
     width: 100%;
-    height: auto;
 }
 
 .footer {
     width: 100%;
-    height: auto;
 }
 
 ::-webkit-scrollbar {

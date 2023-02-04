@@ -1,121 +1,13 @@
 .container_light {
-    min-width: 25em;
-    width: 27.5%;
-    height: 70%;
     background: #F0E9FB;
     box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04);
     border-radius: 1em;
-    margin-bottom: 0;
-    position: relative;
-    overflow: hidden;
-    flex-grow: 1;
 }
 
 
 .container_dark {
-    min-width: 25em;
-    width: 27.5%;
-    max-height: 50%;
     background: #2C1C4B;
     box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04);
     border-radius: 1em;
-    margin-bottom: 0;
-    position: relative;
-    overflow: hidden;
-    flex-grow: 1;
 }
 
-.body_dark {
-    width: 90%;
-    height: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-    min-height: 60%;
-    padding-top: 0.4em;
-    margin-top: 0;
-    color: #F0E9FB;
-    position: relative;
-    display: inline-block;
-    overflow: auto;
-}
-
-.body_light {
-    width: 90%;
-    height: 60%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 0.5em;
-    margin-top: 0;
-    color: #180831;
-    position: relative;
-    display: inline-block;
-    overflow: auto;
-}
-
-
-.img {
-    width: 100%;
-    min-height: 35%;
-    height: auto;
-    margin-top: -4em;
-}
-
-.tagline {
-    display: flex;
-    max-width: 100%;
-    height: auto;
-    flex-wrap: wrap;
-    row-gap: 0.5em;
-}
-
-.tag {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-right: 1em;
-    margin-top: 0em;
-    background: #D3BDF4;
-    border-radius: 22.073px;
-    color: #7A3ADF;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 0.75em;
-    padding-left: 0.8em;
-    padding-right: 0.8em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-.post_title {
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.3em;
-    line-height: 1.1em;
-    margin-top: 0.m;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-.post_title > .dark {
-    color: #2C1C4B;
-    margin: 0;
-}
-
-.post_title > .light {
-    color: #F0E9FB;
-    margin: 0;
-}
-
-.content {
-    width: 100%;
-    height: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1em;
-    margin-top: 5%;
-    overflow: hidden;
-    line-height: 1.3em;
-    white-space: pre-line;
-}

@@ -2,8 +2,8 @@
 @section('content')
 <link rel="stylesheet" href="{{asset('css/Home.css')}}">
 
-<div class="container">
-    <div class="body">
+<div class="home">
+    <div class="hero">
         <div class="intro">
             <p class="blockchain_title">BLOCKCHAIN @</p>
             <h1 class="uwaterloo_title">UWaterloo</h1>

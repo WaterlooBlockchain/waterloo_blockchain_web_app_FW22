@@ -1,12 +1,10 @@
 .header_flex {
-    display:flex;
-    column-gap: 8em;
-    top: 2em;
-    position: absolute;
+    display: flex;
+    margin: 30px auto;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0px;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 850px;
 }
 
 .flex_text {
@@ -16,7 +14,7 @@
     text-decoration: none;
 }
 
-.flex_row {
+.flex_row, flex_row_icon {
     background-image: linear-gradient(#ffffff, #ffffff);
     background-size: 0% 0.1em;
     background-position-y: 100%;
@@ -36,10 +34,7 @@
     text-decoration: none;
 }
 
-.flex_row_icon {
-    width: 5em;
-    height: auto;
-}
+
 
 .flex_row_icon:hover {
     cursor: pointer;

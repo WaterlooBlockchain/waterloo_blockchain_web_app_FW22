@@ -18,8 +18,8 @@
         <style>
             body {
                 margin: 0px;
-                max-width: 100vw;
-                height: auto;
+                padding: 0px;
+                box-sizing: border-box;
                 background: linear-gradient(90deg, #180831, #30195d, #7A3ADF, #7A3ADF, #9866E6, #D3BDF4);
                 background-size: 300% 300%;
                 animation: gradient 60s ease infinite;
