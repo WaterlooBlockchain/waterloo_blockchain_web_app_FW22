@@ -2,7 +2,7 @@
 
 @if($theme === 'dark')
 <div class="container_dark">
-    <img class="img" src="{{$src}}" width=346.27 height=179.34></img>            
+    <img class="img" src="{{$src}}"></img>            
     <div class="body_dark">
         <a href='/blog' class="post_title"><p class="light">{{$title}}</p></a>
         <div class="tagline">
@@ -15,7 +15,7 @@
 </div>
 @else
 <div class="container_light">
-    <img class="img" src="{{$src}}" width=346.27 height=179.34></img>            
+    <img class="img" src="{{$src}}"></img>            
     <div class="body_light">
         <a href='/blog' class="post_title"><p class="dark">{{$title}}</p></a>
         <div class="tagline">

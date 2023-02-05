@@ -7,18 +7,19 @@
         <div class="intro">
             <p class="blockchain_title">BLOCKCHAIN @</p>
             <h1 class="uwaterloo_title">UWaterloo</h1>
-            <div class="button">
-                <a href='https://discord.gg/Wk8n4MTMwf' target="_blank" rel="noreferrer" class="button_text">Join the Community</a>
-                <div>
-                    <a href='https://discord.gg/Wk8n4MTMwf'><i class="fa-brands fa-discord fa-2xl discord_icon"></i></a>
-                </div>
-            </div>
-            <div class="button">
-                <a href='https://vote.uwblockchain.ca/#/' target="_blank" rel="noreferrer" class="button_text">Vote on Proposals</a>
+
+            <div class="hero-buttons">
+                <a class="button" href='https://discord.gg/Wk8n4MTMwf'>
+                    <p>Join the Community<p>
+                    <div class="fa-brands fa-discord fa-xl discord_icon"></div>
+                </a>
+                <a class="button" href='https://vote.uwblockchain.ca/#/'  target="_blank" rel="noreferrer">
+                    <p>Vote on Proposals<p>
+                </a>
             </div>
         </div>
         <div class="main_post">
-            <div class="read_article"><img src="{{asset('images/read_article.png')}}" width=180 height=170></img></div>
+          <img class="read_article" src="{{asset('images/read_article.png')}}" ></img>
             <div class="post_body">
             @include('components.post', [
                 'theme' => 'light',
