@@ -77,7 +77,7 @@ export default function Home() {
                 <h1>Sponsors</h1>
             </div>
             <div className={styles.sponsors}>
-                <Partnership src='/Solana.svg' link='https://solana.com/'></Partnership>
+                <Partnership src='/solana.svg' link='https://solana.com/'></Partnership>
                 <Partnership src='/jackal.svg' link='https://jackalprotocol.com/'></Partnership>
                 <h1>More TBA!</h1>
             </div>
