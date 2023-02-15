@@ -52,7 +52,7 @@ export default function Home() {
                 <h1>Compete in Events</h1>
                 <h1>Take Home Prizes</h1>
             </div>
-            <p className={styles.text}>"The most important thing in the Olympic Games is not to win but to take part, just as the most important thing in life is not the triumph but the struggle. The essential thing is not to have conquered but to have fought well."</p>
+            <p className={styles.text}>&quot;The most important thing in the Olympic Games is not to win but to take part, just as the most important thing in life is not the triumph but the struggle. The essential thing is not to have conquered but to have fought well.&quot;</p>
 
         </div>
         <main className={styles.main}>
@@ -64,7 +64,7 @@ export default function Home() {
         </main>
         <div className={styles.leftContainer}>
             <div className={styles.leftText}>
-                <p>Join Waterloo Blockchain's</p>
+                <p>Join Waterloo Blockchain&apos;s</p>
                 <p>Talent Pipeline for a Weekend</p>
                 <p>Filled with Hacking and Games!</p>
             </div>
