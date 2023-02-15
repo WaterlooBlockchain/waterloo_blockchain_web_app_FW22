@@ -1,7 +1,6 @@
 .header_flex {
-    min-width: 100em;
     display:flex;
-    column-gap: 8em;
+    column-gap: 6vw;
     font-family: 'Montserrat Bold';
     font-weight: 600;
     color: white;
@@ -28,7 +27,7 @@
 }
 
 .flex_row_icon {
-    width: 5em;
+    width: 100%;
     height: auto;
 }
 

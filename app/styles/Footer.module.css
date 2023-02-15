@@ -4,6 +4,7 @@
     position: relative;
     background-color:#2C1C4B;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 3em;
     flex-shrink: 0;
     justify-content: center;

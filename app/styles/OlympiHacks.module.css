@@ -1,0 +1,162 @@
+
+.main {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .body {
+      height: auto;
+      background: linear-gradient(90deg, #180831, #30195d, #7A3ADF, #7A3ADF, #9866E6, #D3BDF4);
+      background-size: 300% 300%;
+      animation: gradient 60s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+      height: auto;
+      color: #F0E9FB;
+      text-shadow: 0px 2.92736px 5.85472px rgba(0, 0, 0, 0.25);
+      margin-top: 5em;
+      justify-content: center;
+      column-gap: 2vw;
+      align-items: center;
+      padding-top: 10%;
+        padding-bottom: 10%;
+  }
+  
+  .logo {
+    width: 15vw;
+    height: auto;
+  }
+  
+  .blockchain {
+      font-family: 'Montserrat Light';
+      font-size: 3.5vw;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      margin-top: 10%;
+      margin-bottom: 0;
+  }
+  
+  .olympihacks {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: 'Montserrat Bold';
+      font-size: 7vw;
+  }
+  
+  .shorten {
+    width: 50%;
+}
+
+.application {
+    display: flex;
+    justify-content: space-between;
+}
+
+.application > a {
+    font-family: 'Montserrat Light';
+    font-size: 2vw;
+    text-decoration: underline;
+}
+
+.text {
+    font-family: 'Montserrat Light';
+    font-size: 2vw;
+    color: white;
+  }
+
+.leftContainer {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 30vw;
+    background-color: #180831;
+    justify-self: flex-start;
+    margin-left: 0;
+    border-radius: 0 100px 100px 0px;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+.leftText {
+    padding: 5%;
+    width: 50%;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat Light';
+    color: white;
+    line-height: 50%;
+}
+
+.rightImage {
+    width: 50%;
+    height: auto;
+}
+
+.binance, .e7 {
+    border-radius: 0 100px 100px 0px;
+    opacity: 0.8;
+}
+
+.textContainer {
+    width: 80%;
+    padding-left: 20%;
+    margin-bottom: 10%;
+}
+
+.title {
+    color: white;
+    font-family: 'Montserrat Bold';
+    font-size: 2vw;
+    line-height: 130%;
+    margin-bottom: 5%;
+}
+
+.partnership_container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
+    row-gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.sponsors {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5%;
+    margin-bottom: 10%;
+}
+
+.sponsors > h1 {
+    color: white;
+    font-size: 2vw;
+}
