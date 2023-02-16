@@ -4,6 +4,7 @@
     border-radius: 1em;
     width: 400px;
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -13,12 +14,114 @@
     border-radius: 1em;
     width: 400px;
     overflow: hidden;
+    position: relative;
 }
 
 .img {
     width: 100%;
+    margin-top: -4em;
+    min-height: 35%;
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
+.tagline {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+    margin: 15px 0px;
+}
+
+
+
+.see_more_posts {
+    float: right;
+    text-decoration: none;
+    color: #F0E9FB;
+    margin: 15px 0px;
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 1em;
+    margin-top: 0em;
+    background: #D3BDF4;
+    border-radius: 22.073px;
+    color: #7A3ADF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.post_title > .light {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    line-height: 1.1em;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.post_title {
+    text-decoration: none;
+}
+
+.post_title > .dark {
+    color: #F0E9FB;
+    margin: 0;
+}
+
+.post_title > .light {
+    color: #2C1C4B;
+    margin: 0;
+}
+
+.content {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    margin-top: 5%;
+    line-height: 1.3em;
+    white-space: pre-line;
+}
+
+.body_dark {
+    width: 90%;
+    height: 50%;
+    min-height: 60%;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #F0E9FB;
+    position: relative;
+    display: inline-block;
+    overflow: auto;
+}
+
+.body_light {
+    max-height: 300px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #180831;
+    position: relative;
+    display: inline-block;
+    overflow: auto;
+}
+
+/* Small Screens */
 @media only screen and (max-width: 768px) {
     .container_dark, .container_light {
         width: 100%;

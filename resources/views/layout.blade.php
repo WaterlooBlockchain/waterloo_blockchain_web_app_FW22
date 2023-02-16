@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/814d3142a2.js" crossorigin="anonymous"></script>
 
         <!-- Styles -->
@@ -45,7 +45,7 @@
             <div class="header">
                 @include('components.header')
             </div>
-            <div class="content">
+            <div class="main">
                 @yield('content')
             </div>
             <div class="footer">

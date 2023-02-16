@@ -5,6 +5,7 @@
 	display: flex;
 	flex-direction: row;
 	margin: auto;
+	height: 650px;
 }
 
 .home {
@@ -43,24 +44,29 @@ h1 {
 	background: #E27876;
 	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
 	border-radius: 12px;
+	margin: 10px 0px;
+	width: 350px;
+	display: inline;
+	padding: 20px 0px;
+	text-decoration: none;
+	text-align:center
+}
+
+.button > p {
+    color: #F0E9FB;
+	text-decoration: none;
+	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;	
     font-size: 1.4em;
-    color: #F0E9FB;
-    text-decoration: none;
-	text-align: center;
-	text-shadow: none;
-	margin: 10px 0px;
-	width: 350px;
-	justify-content: center;
-	align-content: center;
-	justify-items: center;
-	justify-content: center;
-	padding: 20px 0px;
+	text-decoration: none;
+	vertical-align: middle;
+	margin: auto;
 }
 
 .button > * {
 	display: inline;
+	text-shadow: none;
 }
 
 .hero-buttons {
@@ -78,36 +84,90 @@ h1 {
 	cursor: pointer;
 }
 
-.button:hover > .button_text {
-	font-size: 1.65em;
+.button:hover  {
+	transform: scale(1.05);
 	transition-duration: 0.3s;
 }
 
 .read_article {
-	width: 180px;
-	height: 170px;
-}
+	width: 160px;
+	height: 130px;
+	position: absolute;
+	top: 250px;
+	left: -160px;
+	z-index: 1;
+}	
 
 .main_post{
 	display: flex;
 	flex-direction: row;
+	position: relative;
+	/* Offset main post down a bit */
+	align-self: flex-end;
 }
 
+/* Small Screens */
 @media only screen and (max-width: 768px) {
-   .hero {
-	flex-direction: column;
-   }
-
    .read_article {
+	/* Move "read our most recent article" blob from left to top */
 	content: url("../images/read_article_small.png");
-
 	height: 75px;
 	width: auto;
+	top: 0px;
+	left: 0px;
+	margin-bottom: 5px;
+	position: relative;
    }
 
    .main_post{
+	/* Move "read our most recent article" blob from left to top */
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.blockchain_title {
+		font-size: 2em;
+		align-self: center;
+	}
 
+	h1 {
+		font-size: 4em;
+		align-self: center;
+	}
+
+	.button {
+		width: 100%;
+	}
+}
+
+/* Phones */
+@media only screen and (max-width: 480px) {
+	.blockchain_title {
+		font-size: 1.5em;
+		align-self: center;
+	}
+
+	h1 {
+		font-size: 3em;
+		align-self: center;
+	}
+
+	.read_article  {
+		height: 55px;
+	}
+}
+
+/* Non-fullscreened desktop */
+@media only screen and (max-width: 1200px) {
+	/* Prevent overflow from side-by-side title and main post  */
+   .hero {
 	flex-direction: column;
-	align-items: center;
+		height: auto;
+   }
+
+   
+	.intro {
+		display: flex;
+		flex-direction: column;
 	}
 }

@@ -5,6 +5,7 @@
     justify-content: space-between;
     width: 80%;
     max-width: 850px;
+    margin-bottom: 100px;
 }
 
 .flex_text {
@@ -57,4 +58,5 @@
 .user:hover {
     cursor: pointer; 
 }
+
 

@@ -4,12 +4,12 @@
 <div class="container_dark">
     <img class="img" src="{{$src}}"></img>            
     <div class="body_dark">
-        <a href='/blog' class="post_title"><p class="light">{{$title}}</p></a>
         <div class="tagline">
             @foreach ($tags as $tag)
                 <div class="tag">{{$tag}}</div>
             @endforeach
         </div>
+        <a href='/blog' class="post_title"><p class="light">{{$title}}</p></a>
         <p class="content">{{$content}}</p>
     </div>
 </div>
@@ -17,12 +17,12 @@
 <div class="container_light">
     <img class="img" src="{{$src}}"></img>            
     <div class="body_light">
-        <a href='/blog' class="post_title"><p class="dark">{{$title}}</p></a>
         <div class="tagline">
             @foreach ($tags as $tag)
                 <div class="tag">{{$tag}}</div>
             @endforeach
         </div>
+        <a href='/blog' class="post_title"><p class="light">{{$title}}</p></a>
         <p class="content">{{$content}}</p>
     </div>
 </div>
