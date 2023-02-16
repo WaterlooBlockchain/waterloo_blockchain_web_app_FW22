@@ -43,7 +43,7 @@
   }
   
   .logo {
-    width: 15vw;
+    width: 20vw;
     height: auto;
   }
   
@@ -135,7 +135,7 @@
 }
 
 .partnership_container {
-    width: 80%;
+    width: 60%;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -155,6 +155,7 @@
     flex-wrap: wrap;
     column-gap: 5%;
     margin-bottom: 10%;
+    row-gap: 5%;
 }
 
 .sponsors > h1 {

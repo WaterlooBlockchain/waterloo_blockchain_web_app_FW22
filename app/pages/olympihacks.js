@@ -22,7 +22,7 @@ export default function Home() {
         <Header></Header>
         <div className={styles.intro}>
             <div className={styles.logo}>
-                <Image src='/logo.png' width={412} height={477}></Image>
+                <Image src='/goose.png' width={1332} height={1551}></Image>
             </div>
             <div className={styles.shorten}>
                 <h1 className={styles.blockchain}>Waterloo Blockchain</h1>
@@ -74,12 +74,11 @@ export default function Home() {
         </div>
         <main className={styles.main}>
             <div className={styles.title}>
-                <h1>Sponsors</h1>
+                <h1>Current Sponsors</h1>
             </div>
             <div className={styles.sponsors}>
                 <Partnership src='/solana.svg' link='https://solana.com/'></Partnership>
                 <Partnership src='/jackal.svg' link='https://jackalprotocol.com/'></Partnership>
-                <h1>More TBA!</h1>
             </div>
             <div className={styles.title}><h1>Past Sponsors</h1></div>
             <div className={styles.partnership_container}>
