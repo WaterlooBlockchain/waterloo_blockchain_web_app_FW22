@@ -9,7 +9,7 @@
                 <div class="tag">{{$tag}}</div>
             @endforeach
         </div>
-        <a href='/blog' class="post_title"><p class="light">{{$title}}</p></a>
+        <a href='/blog' class="post_title"><p class="dark">{{$title}}</p></a>
         <p class="content">{{$content}}</p>
     </div>
 </div>

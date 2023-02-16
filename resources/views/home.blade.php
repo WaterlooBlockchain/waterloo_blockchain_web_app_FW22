@@ -42,7 +42,7 @@
         Our mission is to bring together a community of passionate individuals to explore and work in blockchain ecosystems like Web3 companies or their own startup. We facilitate and promote growth through events, including technical workshops, meetups with industry experts, and supporting student attendance at conferences. We are nurturing Waterloo&apos;s blockchain community, creating spaces for new connections and exchanging ideas through events. 
         </p>
     </div>
-    <div class="panel_section masked-overflow">
+    <div class="panel_section">
             @include('components.panel', [
                 'icon' => 'fa-solid fa-user-group fa-2xl',
                 'header' => 'Work with Us',
