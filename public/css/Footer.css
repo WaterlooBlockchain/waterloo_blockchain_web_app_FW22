@@ -6,9 +6,18 @@
     display: flex;
     column-gap: 3em;
     flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
+    
     bottom: 0;
+}
+
+.indent {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+    max-width: 1300px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left_div {
@@ -86,5 +95,27 @@
     .footer {
         margin-bottom: 52px;
         flex-direction: column;
+    }
+
+    /* Clear space-between styling and change to stacked */
+    .indent {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+    
+    /* Shrink everything a little on small phones */
+    .logo {
+        width: 4em;
+    }
+    .uwaterloo {
+        font-size: 1.5em;
+    }
+    .blockchain {
+        font-size: 2em;
+    }
+    .c {
+        font-size: 0.8em;
     }
 }
