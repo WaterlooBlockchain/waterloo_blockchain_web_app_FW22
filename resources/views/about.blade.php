@@ -32,13 +32,15 @@
     <div class="past_events_container">
         <h1 class="past_events_title">Our Past Events</h1>
         <div class="past_events_content">
-            @foreach ($events as $event)
-                @include('components.past_events', [
-                    'title' => $event->title,
-                    'date' => $event->date,
-                    'content' => $event->content
-                ])
-            @endforeach
+            <!-- Use a for-each loop here after dynamic data fetching is implemented -->
+            @include('components.past_events', [
+                'icon' => "sample.jpg",
+                'title' => "NEAR Smart Contract Workshop",
+                'date' => "02/16/2023",
+                'content' => "Learned how to create smart contracts in Rust on the NEAR blockchian.",
+                'image' => "sample.jpg"
+            ])
+ 
         </div>
     </div>
     @include('components.sponsorship')
