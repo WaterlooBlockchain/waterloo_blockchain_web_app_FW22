@@ -29,7 +29,7 @@ export default function Home() {
                 <h1 className={styles.olympihacks}>OlympiHacks</h1>
                 <p className={styles.text}>Improvise, adapt, overcome. Olympians advancing the adoption of technology.</p>
                 <div className={styles.application}>
-                    Applications Coming Soon!
+                    <a href="https://forms.gle/trC324ictJDSq4wJ6">Apply To Hack!</a>
                 </div>
             </div>
         </div>

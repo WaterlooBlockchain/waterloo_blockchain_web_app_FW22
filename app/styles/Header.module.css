@@ -8,6 +8,10 @@
     position: absolute;
     align-items: center;
     justify-content: center;
+    font-size: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+
 }
 
 .flex_row {
@@ -42,14 +46,5 @@
     background-position-y: 80%;
     background-position-x: 0%;
     background-repeat: no-repeat;
-}
-
-.user {
-    color: white;
-    font-size: 2em;
-}
-
-.user:hover {
-    cursor: pointer; 
 }
 
