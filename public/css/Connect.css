@@ -8,7 +8,7 @@
 
 .connect_title {
 	align-self: center;
-	white-space: nowrap;
+	text-align: center;
 }
 
 .connect_meet_subheading {
@@ -16,7 +16,6 @@
 	color: #F0E9FB;
 	max-width: 600px;
 	margin: auto;
-
 }
 
 .connect_meet_grid {
@@ -35,10 +34,75 @@
 	justify-items: center;
 }
 
+.contact_container {
+	margin: auto;
+    background-color: #30195d;
+    border-radius: 1em;
+	padding: 4em 8em;
+    display:flex;
+    flex-direction: column;
+    row-gap: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	white-space: normal;
+	align-items: center;
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
+}
+.contacts > p, .contacts > a{
+    margin: 0;
+
+	
+	font-size: 2em;
+	font-family: 'Montserrat', sans-serif;
+	color: #F0E9FB;
+	text-decoration: none;
+}
+
+.contacts > a:hover{
+    text-decoration: underline;
+}
+
+.partnership_container {
+    margin-top: 2em;
+    width: 100em;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5em;
+    row-gap: 2.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.partnership_title {
+    margin-top: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color:#D3BDF4;
+    font-size: 2.5em;
+}
+
+.sponser_container {
+    margin-bottom: 5em;
+}
+
+
 /* Small Screens */
 @media only screen and (max-width: 768px) {
 	.connect_container {
 		width: 90%;
+	}
+
+	.contact_container {
+		padding: 4em 2em;
 	}
 }
 

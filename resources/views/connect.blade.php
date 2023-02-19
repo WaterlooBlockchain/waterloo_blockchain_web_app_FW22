@@ -1,12 +1,11 @@
 @extends('layout')
 @section('content')
-<link rel="stylesheet" href="{{asset('css/Partnerships.css')}}">
 <link rel="stylesheet" href="{{asset('css/Connect.css')}}">
 <div class="connect_container">
-    <h1 class="connect_title">Contact UW Blockchain Club</h1>
+    <h1 class="connect_title title long_title">Contact UW Blockchain Club</h1>
     <div class="contact_container">
         <div class="contacts">
-        <i class="fa fa-envelope fa-2xl icons"></i><p class="contacts">uwaterlooblockchain@gmail.com</p>
+        <i class="fa fa-envelope fa-2xl icons"></i><a href="mailto:uwaterlooblockchain@gmail.com">uwaterloo<wbr>blockchain<wbr>@<wbr>gmail.com</a></p>
         </div>
         <div class="contacts">
         <i class="fa-brands fa-discord fa-2xl icons"></i><a href='https://discord.gg/PW9HjVp4G6' class="contacts" target="_blank" rel="noreferrer">Join Discord</a>
@@ -21,6 +20,7 @@
         <i class="fa-brands fa-linkedin fa-2xl icons"></i><a href='https://www.linkedin.com/company/uwblockchainclub/' class="contacts" target="_blank" rel="noreferrer">University of Waterloo Blockchain Club</a>
         </div>
     </div>
+    
     <h1 class="partnership_title">Past Partnerships</h1>
     <div class="partnership_container">
         @include('components.partnership', [
