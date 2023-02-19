@@ -13,6 +13,7 @@
     box-sizing: border-box;
     align-self: center;
     justify-self: center;
+    text-decoration: none;
 }
 
 .portrait_name {
