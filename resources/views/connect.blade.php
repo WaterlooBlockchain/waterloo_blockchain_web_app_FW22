@@ -76,12 +76,6 @@
             'link' => 'https://mattwong.ca/'
         ])
         @include('components.portrait', [
-            'name' => 'Raymond Zhao',
-            'src' => asset('images/portraits/empty.png'),
-            'title' => 'Director of Finanace',
-            'link' => 'http://linkedin.com/in/ruiyang-zhao-5304a022b'
-        ])
-        @include('components.portrait', [
             'name' => 'Xavier D\'Mello',
             'src' => asset('images/portraits/XavierDMello.jpg'),
             'title' => 'Director of Technology',
@@ -89,10 +83,9 @@
         ])
         @include('components.portrait', [
             'name' => 'Eleanor Liu',
-            'src' => asset('images/portraits/empty.png'),
+            'src' => asset('images/portraits/EleanorLiu.jpg'),
             'title' => 'Director of Research',
             'link' => 'https://www.linkedin.com/in/eleanorcliu/'
-
         ])
         @include('components.portrait', [
             'name' => 'Tanay Kashyap',
@@ -120,7 +113,7 @@
         ])
         @include('components.portrait', [
             'name' => 'Amy Qin',
-            'src' => asset('images/portraits/empty.png'),
+            'src' => asset('images/portraits/AmyQin.jpg'),
             'title' => 'Dev Team Lead',
             'link' => 'https://www.linkedin.com/in/amy--qin/'
         ])
@@ -156,7 +149,7 @@
         ])
         @include('components.portrait', [
             'name' => 'Boyang Nie',
-            'src' => asset('images/portraits/empty.png'),
+            'src' => asset('images/portraits/BoyangNie.jpg'),
             'title' => 'Research Team',
             'link' => 'https://www.linkedin.com/in/boyang-nie-669088225/'
         ])
