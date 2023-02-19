@@ -1,8 +1,9 @@
 @extends('layout')
 @section('content')
 <link rel="stylesheet" href="{{asset('css/Partnerships.css')}}">
-<div class="container">
-    <h1 class="title">Contact UW Blockchain Club</h1>
+<link rel="stylesheet" href="{{asset('css/Connect.css')}}">
+<div class="connect_container">
+    <h1 class="connect_title">Contact UW Blockchain Club</h1>
     <div class="contact_container">
         <div class="contacts">
         <i class="fa fa-envelope fa-2xl icons"></i><p class="contacts">uwaterlooblockchain@gmail.com</p>
@@ -59,4 +60,94 @@
         ])
     </div>
     @include('components.sponsorship')
+    <h1 class="connect_title title">Meet the Team</h1>
+    <p class="connect_meet_subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla arcu eleifend blandit urna arcu. Lorem ipsum dolor sit amet,</p>
+    <div class="connect_meet_grid">
+        @include('components.portrait', [
+            'name' => 'Fahim Ahmed',
+            'src' => asset('images/portraits/FahimAhmed.jpg'),
+            'title' => 'President'
+        ])
+        @include('components.portrait', [
+            'name' => 'Matt Wong',
+            'src' => asset('images/portraits/MattWong.jpg'),
+            'title' => 'Director of Partnerships'
+        ])
+        @include('components.portrait', [
+            'name' => 'Raymond Zhao',
+            'src' => asset('images/portraits/empty.png'),
+            'title' => 'Director of Finanace'
+        ])
+        @include('components.portrait', [
+            'name' => 'Xavier D\'Mello',
+            'src' => asset('images/portraits/XavierDMello.jpg'),
+            'title' => 'Director of Technology'
+        ])
+        @include('components.portrait', [
+            'name' => 'Eleanor Liu',
+            'src' => asset('images/portraits/empty.png'),
+            'title' => 'Director of Research'
+        ])
+        @include('components.portrait', [
+            'name' => 'Tanay Kashyap',
+            'src' => asset('images/portraits/TanayKashyap.jpg'),
+            'title' => 'Director of Education'
+        ])
+        @include('components.portrait', [
+            'name' => 'Tony Li',
+            'src' => asset('images/portraits/TonyLi.jpg'),
+            'title' => 'Director of Operations'
+        ])
+        @include('components.portrait', [
+            'name' => 'Chris Simanjuntak',
+            'src' => asset('images/portraits/ChristopherSimanjuntak.jpg'),
+            'title' => 'Director of Marketing'
+        ])
+        @include('components.portrait', [
+            'name' => 'Violet Li',
+            'src' => asset('images/portraits/VioletLi.jpg'),
+            'title' => 'Events Manager'
+        ])
+        @include('components.portrait', [
+            'name' => 'Amy Qin',
+            'src' => asset('images/portraits/empty.png'),
+            'title' => 'Dev Team Lead'
+        ])
+        @include('components.portrait', [
+            'name' => 'Andre Benedito',
+            'src' => asset('images/portraits/AndreBenedito.jpg'),
+            'title' => 'Dev Team'
+        ])
+        @include('components.portrait', [
+            'name' => 'Richard Yang',
+            'src' => asset('images/portraits/RichardYang.jpg'),
+            'title' => 'Dev Team'
+        ])
+        @include('components.portrait', [
+            'name' => 'Johnatan Gao',
+            'src' => asset('images/portraits/JohnatanGao.jpg'),
+            'title' => 'Dev Team'
+        ])
+        @include('components.portrait', [
+            'name' => 'Brayden Royston',
+            'src' => asset('images/portraits/BraydenRoyston.jpg'),
+            'title' => 'Dev Team'
+        ])
+        @include('components.portrait', [
+            'name' => 'Jaiden Ratti',
+            'src' => asset('images/portraits/JaidenRatti.jpg'),
+            'title' => 'Research Team'
+        ])
+        @include('components.portrait', [
+            'name' => 'Boyang Nie',
+            'src' => asset('images/portraits/empty.png'),
+            'title' => 'Research Team'
+        ])
+        @include('components.portrait', [
+            'name' => 'Jacob Simm',
+            'src' => asset('images/portraits/JacobSimm.jpg'),
+            'title' => 'Education Team'
+        ])
+    </div>
 </div>
+@stop

@@ -1,0 +1,44 @@
+.connect_container {
+	width: 80%;
+	margin: auto;
+	max-width: 1300px;
+	display: flex;
+	flex-direction: column;
+}
+
+.connect_title {
+	align-self: center;
+	white-space: nowrap;
+}
+
+.connect_meet_subheading {
+	text-align: center;
+	color: #F0E9FB;
+	max-width: 600px;
+	margin: auto;
+
+}
+
+.connect_meet_grid {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin: 75px auto;
+	gap: 40px; 
+	justify-items: center;
+}
+
+.connect_meet_grid {
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	justify-items: center;
+}
+
+/* Small Screens */
+@media only screen and (max-width: 768px) {
+	.connect_container {
+		width: 90%;
+	}
+}
+

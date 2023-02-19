@@ -9,7 +9,9 @@
 .content {
     width: 100%;
 }
-
+.main{
+    width: 100%;
+}
 .footer {
     width: 100%;
 }
@@ -35,5 +37,29 @@ h1 {
     font-family: 'Montserrat', sans-serif;
 	font-weight: 600;	
     font-size: 2.5em;
+}
+
+.title {
+    margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;	
+    font-size: 5em;
+    text-shadow: 0px 2.92736px 5.85472px rgba(0, 0, 0, 0.25);
+    color: #F0E9FB;
+}
+
+/* Small Screens */
+@media only screen and (max-width: 768px) {
+	.title {
+		font-size: 3em;
+	}
+}
+
+/* Phones */
+@media only screen and (max-width: 480px) {
+	.title {
+		font-size: 2em;
+	}
 }
 

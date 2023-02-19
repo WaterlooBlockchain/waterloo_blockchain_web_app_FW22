@@ -6,7 +6,7 @@
     <div class="hero">
         <div class="intro">
             <p class="blockchain_title">BLOCKCHAIN @</p>
-            <h1 class="uwaterloo_title">UWaterloo</h1>
+            <h1 class="uwaterloo_title title">UWaterloo</h1>
 
             <div class="hero-buttons">
                 <a class="button" href='https://discord.gg/Wk8n4MTMwf'>
@@ -62,6 +62,16 @@
                 'content' =>'We create value for the broader blockchain community through research and development, our membership has a wide range of technical backgrounds, with some developing start-ups in the Defi and NFT space, and some who were just onboarded to the Web3 space. DYOR!'
             ])
     </div>
+    
+    <!-- <div class="past_events_container">
+        @include('components.past_events', [
+            'icon' => "sample.jpg",
+            'title' => "NEAR Smart Contract Workshop",
+            'date' => "02/16/2023",
+            'content' => "Learned how to create smart contracts in Rust on the NEAR blockchian.",
+            'image' => "sample.jpg"
+        ])
+    </div> -->
     <div class="blog_container">
           <h1 class="blog_title">Read Our Work</h1>
           <div class="blogs">
