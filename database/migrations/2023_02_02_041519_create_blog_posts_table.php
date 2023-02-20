@@ -20,7 +20,7 @@ class CreateBlogPostsTable extends Migration
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
-
+        
         // Create the backup table
         Schema::create('blog_posts_backup', function (Blueprint $table) {
             $table->smallIncrements('id');
@@ -35,7 +35,6 @@ class CreateBlogPostsTable extends Migration
 
         // Create the backup trigger for that table before update
         DB::unprepared("
-        DELIMITER |
         CREATE TRIGGER backup_blog_post_before_update
             BEFORE UPDATE 
             ON blog_posts FOR EACH ROW
@@ -43,13 +42,10 @@ class CreateBlogPostsTable extends Migration
             INSERT INTO blog_posts_backup(title, isFeatured, image, tags, content)
             VALUES(old.title, old.isFeatured, old.image, old.tags, old.content);
         END;
-        |
-        DELIMITER ;
         ");
 
         // Create the backup trigger for that table after insert
         DB::unprepared("
-        DELIMITER |
         CREATE TRIGGER backup_blog_post_after_insert
             AFTER INSERT 
             ON blog_posts FOR EACH ROW
@@ -57,16 +53,14 @@ class CreateBlogPostsTable extends Migration
             INSERT INTO blog_posts_backup(title, isFeatured, image, tags, content)
             VALUES(NEW.title, NEW.isFeatured, NEW.image, NEW.tags, NEW.content);
         END;
-        |
-        DELIMITER ;
         ");
     }
 
     public function down()
     {
         Schema::dropIfExists('blogs');
-        DB::unprepared('DROP TRIGGER `backup_blog_post_before_update`;');
-        DB::unprepared('DROP TRIGGER `backup_blog_post_before_delete`;');
-        DB::unprepared('DROP TRIGGER `backup_blog_post_after_insert`;');
+        DB::unprepared('DROP TRIGGER IF EXISTS `backup_blog_post_before_update`;');
+        DB::unprepared('DROP TRIGGER IF EXISTS `backup_blog_post_before_delete`;');
+        DB::unprepared('DROP TRIGGER IF EXISTS `backup_blog_post_after_insert`;');
     }
 }
