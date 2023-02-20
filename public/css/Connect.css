@@ -10,6 +10,9 @@
 	align-self: center;
 	text-align: center;
 }
+.contact_title {
+	margin-bottom: 25px;
+}
 
 .connect_meet_subheading {
 	text-align: center;
@@ -44,6 +47,7 @@
     row-gap: 2em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+	margin-bottom: 120px;
 }
 
 .contacts {
@@ -57,8 +61,6 @@
 }
 .contacts > p, .contacts > a{
     margin: 0;
-
-	
 	font-size: 2em;
 	font-family: 'Montserrat', sans-serif;
 	color: #F0E9FB;
@@ -71,7 +73,7 @@
 
 .partnership_container {
     margin-top: 2em;
-    width: 100em;
+	width: 90vw;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -82,12 +84,8 @@
     margin-bottom: 5em;
 }
 
-.partnership_title {
-    margin-top: 2em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color:#D3BDF4;
-    font-size: 2.5em;
+.meet_team_title {
+	margin-top: 80px;
 }
 
 .sponser_container {
@@ -103,6 +101,27 @@
 
 	.contact_container {
 		padding: 4em 2em;
+	}
+
+	.contacts > p, .contacts > a{
+		font-size:1.5em;
+	}
+}
+
+/* Phones */
+@media only screen and (max-width: 480px) {
+	.contacts > p, .contacts > a{
+		font-size:1.2em;
+	}
+}
+
+/* Extremely Small Screens */
+@media only screen and (max-width: 370px) {
+	
+	.connect_meet_grid {
+		/* Fit two rows on one screen */
+		column-gap: 18px;
+		row-gap: 28px;
 	}
 }
 

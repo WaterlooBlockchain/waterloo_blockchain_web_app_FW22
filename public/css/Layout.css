@@ -47,10 +47,15 @@ h1 {
     font-size: 4em;
     text-shadow: 0px 2.92736px 5.85472px rgba(0, 0, 0, 0.25);
     color: #F0E9FB;
-    
 }
 
-.long_title {
+.small_title {
+    margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;	
+    text-shadow: 0px 2.92736px 5.85472px rgba(0, 0, 0, 0.25);
+    color: #F0E9FB;
 	font-size: 3em;
 }
 
@@ -61,7 +66,7 @@ h1 {
 		font-size: 3em;
 	}
 
-    .long_title {
+    .small_title {
 	    font-size: 2.5em;
     }
 }
@@ -72,7 +77,7 @@ h1 {
 		font-size: 2em;
 	}
     
-    .long_title {
+    .small_title {
 	    font-size: 2em;
     }
 }

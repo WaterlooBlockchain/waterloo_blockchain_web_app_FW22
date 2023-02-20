@@ -4,11 +4,20 @@
     justify-content: center;
     align-items: center;
     column-gap: 1em;
+    max-width: 100%;
 }
 
+.partner_img, .partner_img_noname {
+    margin: 0;
+}
 .partner_img {
-    width: auto;
-    height: 5em;
+    width: 64px;
+    height: auto;
+}
+
+.partner_img_noname {
+    width: 100%;
+    height: auto;
 }
 
 .partner_name {
