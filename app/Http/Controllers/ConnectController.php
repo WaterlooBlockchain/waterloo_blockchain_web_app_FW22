@@ -19,5 +19,4 @@ class ConnectController extends Controller
         return View::make('connect')
             ->with('partnerships', $partnerships);
     }
-
 }

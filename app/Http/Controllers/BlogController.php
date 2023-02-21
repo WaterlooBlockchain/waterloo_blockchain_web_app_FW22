@@ -13,7 +13,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blog_posts = DB::table('blog_posts')->get();
+        $blog_posts = DB::select('SELECT * FROM laravel.blog_posts WHERE id < (SELECT MAX(id) FROM laravel.blog_posts WHERE isFeatured=?) ORDER BY id', [FALSE]);
         
         return View::make('Blog')
             ->with('blog_posts', $blog_posts);
