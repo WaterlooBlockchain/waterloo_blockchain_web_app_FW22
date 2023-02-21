@@ -13,7 +13,8 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>OlympiHacks</title>
-        <meta name="description" content="OlympiHacks Hackathon presented by Waterloo Blockchain" />
+        <meta name="description" content="OlympiHacks Hackathon presented by Waterloo Blockchain on May 19 to 21st." />
+        <meta property="og:image" content={"https://imgur.com/a/MXswRQY"} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/uw_blockchain.png" />
       </Head>
