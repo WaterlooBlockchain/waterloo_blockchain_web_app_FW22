@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 
-class PastEventsController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.

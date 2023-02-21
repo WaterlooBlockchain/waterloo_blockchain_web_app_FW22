@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\PastEventsController;
+use App\Http\Controllers\ConnectController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +20,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/connect', function () {
-    return view('connect');
-});
-
 Route::resources([
-    'about' => PastEventsController::class,
-    'blog' => BlogController::class
+    'about' => AboutController::class,
+    'blog' => BlogController::class,
+    'connect' => ConnectController::class
 ]);
 

@@ -15,7 +15,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('past_events', function (Blueprint $table) {
-            $table->smallIncrements('id');
+            $table->id();
             $table->text('title');
             $table->date('date');
             $table->text('content');
@@ -25,7 +25,7 @@ return new class extends Migration
         });
 
         Schema::create('past_events_backup', function (Blueprint $table) {
-            $table->smallIncrements('id');
+            $table->id();
             $table->text('title');
             $table->date('date');
             $table->text('content');
