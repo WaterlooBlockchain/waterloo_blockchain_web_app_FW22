@@ -27,7 +27,7 @@ VALUES (
 
 INSERT INTO laravel.blog_posts (title, isFeatured, tags, content, image)
 VALUES(
-    "Tokens vs Coins, what&apos;s the difference?",
+    "Tokens vs Coins, what's the difference?",
     true,
     '',
     "Cryptocurrency coins and tokens are both considered digital assets as they are both non tangible assets that are created and traded and stored in digital format.

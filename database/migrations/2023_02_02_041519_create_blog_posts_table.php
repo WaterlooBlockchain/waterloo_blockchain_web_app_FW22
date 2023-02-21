@@ -11,7 +11,7 @@ class CreateBlogPostsTable extends Migration
     {
         // Create the main table
         Schema::create('blog_posts', function (Blueprint $table) {
-            $table->smallIncrements('id');
+            $table->id();
             $table->text('title');
             $table->boolean('isFeatured');
             $table->longText('image');
@@ -23,7 +23,7 @@ class CreateBlogPostsTable extends Migration
         
         // Create the backup table
         Schema::create('blog_posts_backup', function (Blueprint $table) {
-            $table->smallIncrements('id');
+            $table->id();
             $table->text('title');
             $table->boolean('isFeatured');
             $table->longText('image');
