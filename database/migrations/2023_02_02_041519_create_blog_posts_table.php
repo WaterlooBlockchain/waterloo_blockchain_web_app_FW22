@@ -60,7 +60,6 @@ class CreateBlogPostsTable extends Migration
     {
         Schema::dropIfExists('blogs');
         DB::unprepared('DROP TRIGGER IF EXISTS `backup_blog_post_before_update`;');
-        DB::unprepared('DROP TRIGGER IF EXISTS `backup_blog_post_before_delete`;');
         DB::unprepared('DROP TRIGGER IF EXISTS `backup_blog_post_after_insert`;');
     }
 }

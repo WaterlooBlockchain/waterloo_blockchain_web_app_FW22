@@ -9,6 +9,7 @@ class PastEvent extends Model
     protected $event = [
         'title',
         'date',
-        'content'
+        'content',
+        'image'
     ];
 }
