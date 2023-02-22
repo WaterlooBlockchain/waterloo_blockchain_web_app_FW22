@@ -16,11 +16,11 @@ class HomeController extends Controller
         $blog_posts = DB::select(
         'SELECT 
             desanitize_string(title) as title,
-            isFeatured,
             desanitize_string(image) as image,
             desanitize_string(tags) as tags,
             desanitize_string(content) as content
         FROM laravel.blog_posts 
+        WHERE isFeatured=FALSE
         ORDER BY id DESC 
         LIMIT ?
         ', [4]);
