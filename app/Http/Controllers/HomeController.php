@@ -14,15 +14,19 @@ class HomeController extends Controller
     public function index()
     {
         $blog_posts = DB::select(
-            "SELECT * FROM laravel.blog_posts bp WHERE bp.isFeatured=? ORDER BY bp.created_at DESC LIMIT ?", [FALSE, 3]
-        );
-
-        $latest_post = DB::select(
-            "SELECT * FROM laravel.blog_posts WHERE id=(SELECT MAX(id) FROM laravel.blog_posts WHERE isFeatured=?) LIMIT ?", [FALSE, 1]
-        );
+        'SELECT 
+            desanitize_string(title) as title,
+            desanitize_string(image) as image,
+            desanitize_string(tags) as tags,
+            desanitize_string(content) as content
+        FROM laravel.blog_posts 
+        WHERE isFeatured=?
+        ORDER BY id DESC 
+        LIMIT ?
+        ', [FALSE, 4]);
         
         return View::make('home')
-            ->with('blog_posts', $blog_posts)
-            ->with('latest_post', $latest_post);
+            ->with('blog_posts', array_slice($blog_posts, 1, 3))
+            ->with('latest_post', $blog_posts[0]);
     }
 }

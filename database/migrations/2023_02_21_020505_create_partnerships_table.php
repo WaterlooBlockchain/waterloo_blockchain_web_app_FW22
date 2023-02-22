@@ -17,8 +17,8 @@ return new class extends Migration
         // Create the main table
         Schema::create('partnerships', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->text('link');
+            $table->longText('name');
+            $table->longText('link');
             $table->boolean('isCurrent');
             $table->longText('image');
             $table->timestamp('created_at')->useCurrent();
@@ -28,8 +28,8 @@ return new class extends Migration
         // Create the backup table
         Schema::create('partnerships_backup', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->text('link');
+            $table->longText('name');
+            $table->longText('link');
             $table->boolean('isCurrent');
             $table->longText('image');
             $table->timestamp('created_at')->useCurrent();

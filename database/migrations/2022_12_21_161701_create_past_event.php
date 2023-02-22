@@ -16,9 +16,9 @@ return new class extends Migration
     {
         Schema::create('past_events', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
+            $table->longText('title');
             $table->date('date');
-            $table->text('content');
+            $table->longText('content');
             $table->longText('image')->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
@@ -26,9 +26,9 @@ return new class extends Migration
 
         Schema::create('past_events_backup', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
+            $table->longText('title');
             $table->date('date');
-            $table->text('content');
+            $table->longText('content');
             $table->longText('image')->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();

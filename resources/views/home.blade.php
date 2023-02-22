@@ -20,15 +20,13 @@
         <div class="main_post">
             <div class="read_article"><img src="{{asset('images/read_article.png')}}" width=180 height=170></img></div>
             <div class="post_body">
-            @foreach ($latest_post as $post)
                 @include('components.post', [
                     'theme' => 'light',
-                    'src' => $post->image,
-                    'title' => $post->title,
-                    'tags' => explode(",", $post->tags),
-                    'content' => $post->content
+                    'src' => $latest_post->image,
+                    'title' => $latest_post->title,
+                    'tags' => explode(",", $latest_post->tags),
+                    'content' => $latest_post->content
                     ])
-            @endforeach
                 <a href='/blog' class="see_more_posts">See More Posts &gt;</a>
             </div>
         </div>
