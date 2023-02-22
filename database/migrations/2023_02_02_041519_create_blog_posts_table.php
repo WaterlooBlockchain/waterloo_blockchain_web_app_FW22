@@ -12,10 +12,10 @@ class CreateBlogPostsTable extends Migration
         // Create the main table
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
+            $table->longText('title');
             $table->boolean('isFeatured');
             $table->longText('image');
-            $table->text('tags');
+            $table->longText('tags');
             $table->longText('content');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
@@ -24,10 +24,10 @@ class CreateBlogPostsTable extends Migration
         // Create the backup table
         Schema::create('blog_posts_backup', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
+            $table->longText('title');
             $table->boolean('isFeatured');
             $table->longText('image');
-            $table->text('tags');
+            $table->longText('tags');
             $table->longText('content');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
