@@ -20,10 +20,10 @@ class HomeController extends Controller
             desanitize_string(tags) as tags,
             desanitize_string(content) as content
         FROM laravel.blog_posts 
-        WHERE isFeatured=FALSE
+        WHERE isFeatured=?
         ORDER BY id DESC 
         LIMIT ?
-        ', [4]);
+        ', [FALSE, 4]);
         
         return View::make('home')
             ->with('blog_posts', array_slice($blog_posts, 1, 3))
