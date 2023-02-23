@@ -122,3 +122,71 @@ BEGIN
 
     DELETE FROM laravel.blog_posts WHERE id=p_id;
 END
+
+DROP PROCEDURE IF EXISTS GET_PAST_EVENTS;
+CREATE PROCEDURE GET_PAST_EVENTS (
+    IN p_id INT,
+    IN p_title LONGTEXT,
+    IN p_date DATE,
+    IN p_content LONGTEXT,
+    IN p_image LONGTEXT
+)
+BEGIN
+    SELECT 
+        id, 
+        desanitize_string(title) AS title, 
+        date,
+        desanitize_string(content) AS content, 
+        desanitize_string(image) AS image,
+        created_at, 
+        updated_at
+    FROM 
+        laravel.past_events
+    WHERE 
+        (p_id IS NULL OR id = p_id)
+        AND (p_title IS NULL OR title = sanitize_string(p_title))
+        AND (p_date IS NULL OR date = p_date)
+        AND (p_content IS NULL OR content = sanitize_string(p_content))
+        AND (p_image IS NULL OR image = sanitize_string(p_image));
+END;
+
+DROP PROCEDURE IF EXISTS CREATE_PAST_EVENT;
+CREATE PROCEDURE CREATE_PAST_EVENT (IN p_title LONGTEXT, IN p_date DATE, IN p_content LONGTEXT, IN p_image LONGTEXT)
+BEGIN
+	DECLARE s_title LONGTEXT;
+    DECLARE s_content LONGTEXT;
+    DECLARE s_image LONGTEXT;
+   
+    IF p_date IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Past Event date cannot be null';
+    END IF;
+
+    IF p_title IS NULL OR LENGTH(p_title) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Past Event title cannot be null or an empty string';
+    END IF;
+
+    IF p_content IS NULL OR LENGTH(p_content) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Past Event content cannot be null or an empty string';
+    END IF;
+   
+    SET s_title = sanitize_string(p_title);
+    SET s_content = sanitize_string(p_content);
+    SET s_image = sanitize_string(p_image);
+   
+    INSERT INTO laravel.blog_posts (title, isFeatured, tags, content, image)
+    VALUES (s_title, p_isFeatured, s_tags, s_content, s_image);
+END;
+
+
+DROP PROCEDURE IF EXISTS UPDATE_PAST_EVENT;
+
+
+DROP PROCEDURE IF EXISTS DELETE_PAST_EVENT;
+CREATE PROCEDURE DELETE_PAST_EVENT (IN p_id BIGINT)
+BEGIN
+    IF p_id IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ID cannot be null';
+    END IF;
+
+    DELETE FROM laravel.past_events WHERE id=p_id;
+END
