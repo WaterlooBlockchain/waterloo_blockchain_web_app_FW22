@@ -21,7 +21,7 @@ class BlogController extends Controller
                 desanitize_string(tags) as tags,
                 desanitize_string(content) as content
             FROM laravel.blog_posts
-            WHERE id < (SELECT MAX(id) FROM laravel.blog_posts WHERE isFeatured=?)
+            WHERE id <> (SELECT MAX(id) FROM laravel.blog_posts WHERE isFeatured=?)
             ORDER BY id
         ', [FALSE]);
         
