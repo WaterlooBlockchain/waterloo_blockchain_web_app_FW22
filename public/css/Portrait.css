@@ -10,7 +10,6 @@
 .portrait {
     display: inline-flex;
     flex-direction: column;
-    box-sizing: border-box;
     align-self: center;
     justify-self: center;
     text-decoration: none;

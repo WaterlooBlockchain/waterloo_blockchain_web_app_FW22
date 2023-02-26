@@ -27,15 +27,13 @@
 	justify-content: flex-start;
 	margin: 75px auto;
 	gap: 40px; 
-	justify-items: center;
-}
 
-.connect_meet_grid {
 	align-items: center;
 	align-content: center;
 	justify-content: center;
 	justify-items: center;
 }
+
 
 .contact_container {
 	margin: auto;

@@ -9,6 +9,10 @@
 	margin-bottom: 100px;
 }
 
+.post_body .container_light {
+	width: 400px;
+}
+
 .home {
 	width: 80%;
 	margin: auto;
@@ -127,16 +131,18 @@
 	width: 100%;
 	gap: 20px;
 	overflow-x: auto;
+	flex-basis: 400px !important;
+	flex-shrink: 0;
+}
 
+.blogs .container_dark {
+	width: 400px;
+	min-width: 400px;
 }
 
 .panel_section, .blog_container  {
 	margin-bottom: 120px;
 }
-
-
-
-
 
 /* Small Screens */
 @media only screen and (max-width: 768px) {
@@ -155,6 +161,7 @@
 	/* Move "read our most recent article" blob from left to top */
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
 	}
 	
 	.blockchain_title {
@@ -178,11 +185,23 @@
 	.panel_section, .blogs {
 		flex-direction: column;
 		overflow: auto;
+		align-items: center;
 	}
 	
 	.home {
 		width: 90%;
 	}
+
+	.blogs .container_dark {
+		width: 100%;
+		max-width: none;
+		min-width: none;
+	}
+
+	.post_body .container_light {
+		width: 100%;
+	}
+
 }
 
 /* Phones */
