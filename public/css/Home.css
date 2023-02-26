@@ -131,12 +131,11 @@
 	width: 100%;
 	gap: 20px;
 	overflow-x: auto;
-	flex-basis: 400px !important;
+	flex-basis: 400px;
 	flex-shrink: 0;
 }
 
-.blogs .container_dark {
-	width: 400px;
+.blogs > .container_dark {
 	min-width: 400px;
 }
 
@@ -186,16 +185,17 @@
 		flex-direction: column;
 		overflow: auto;
 		align-items: center;
+		width: 100%;
 	}
 	
 	.home {
 		width: 90%;
 	}
 
-	.blogs .container_dark {
+	.blogs > .container_dark {
 		width: 100%;
-		max-width: none;
-		min-width: none;
+		max-width: auto; 
+		min-width: auto;
 	}
 
 	.post_body .container_light {

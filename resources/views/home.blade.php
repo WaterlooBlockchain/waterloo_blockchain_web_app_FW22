@@ -80,8 +80,9 @@
                 'src' => asset('images/web.jpg'),
                 'title' => 'Web 2.0 vs Web 3.0',
                 'tags' => ['#Blockchain', '#Web2' , '#Web3'],
+                'isFeatured' => 0,
                 'content' => 'Web 2.0 and Web 3.0 are successive iterations of the web. Web 2.0 is the version that most people know and use today, which is the internet. The internet is where companies provide services to users in exchange for their data.
-               
+
                 Web 2.0 developed the growth of user-generated content along with its compatibility and usability for users. Web 3.0 is built on the concept of decentralization which refers to a system where control is transferred from a central authority to a distributed network.
                
                 In Web 3.0, decentralized apps are run on the blockchain and the apps allow users to participate without giving up their data.'
@@ -91,6 +92,7 @@
                 'src' => asset('images/bitcoin.jpg'),
                 'title' => 'Bitcoin? What is it?',
                 'tags' => ['#Blockchain', '#Cryptocurrency', '#Bitcoin'],
+                'isFeatured' => 0,
                 'content' => 'Bitcoin is the first ever successful cryptocurrency and payment system to ever exist and it was first launched in 2009 by creator Satoshi Nakamoto who is a presumed pseudonymous person. 
                 
                 Bitcoin is a virtual currency that is designed to act as a form of money and payment that removes the need of a middleman in financial transactions. It can be rewarded to blockchain miners for their work on verifying transactions and it can also be bought on several exchanges.'
@@ -100,6 +102,7 @@
                 'src' => asset('images/wallet.jpg'),
                 'title' => 'Crypto Wallet, More than an Address Book?',
                 'tags' => ['#Blockchain', '#Cryptocurrency', '#Technology'],
+                'isFeatured' => 0,
                 'content' => ' A crypto wallet is where users can keep their private keys and passwords to gain access to their cryptocurrencies. 
                 
                 Wallets can come in several forms such as Hardware wallets(ledger, usb stick), or mobile apps like coinbase. Crypto wallets are crucial to anyone that owns crypto currency. 
