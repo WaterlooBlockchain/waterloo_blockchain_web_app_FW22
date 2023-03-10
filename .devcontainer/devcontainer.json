@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/php-mariadb
 {
-	"name": "PHP & MariaDB",
+	"name": "PHP & MySQL",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
@@ -14,7 +14,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
-	"postCreateCommand": "composer install && php artisan key:generate && php artisan migrate && php artisan db:seed && php artisan serve"
+	"postCreateCommand": "composer install && php artisan key:generate && php artisan migrate:fresh && php artisan db:seed && php artisan serve"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

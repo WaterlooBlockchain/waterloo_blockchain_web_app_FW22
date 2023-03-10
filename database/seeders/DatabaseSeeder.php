@@ -22,7 +22,12 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $sql = file_get_contents(database_path('seeds/blog_posts.sql'));
-        DB::unprepared($sql);
+        $seed_blog_posts_sql = file_get_contents(database_path('seeds/blog_posts.sql'));
+        $seed_past_events_sql = file_get_contents(database_path('seeds/past_events.sql'));
+        $seed_partnerships_sql = file_get_contents(database_path(('seeds/partnerships.sql')));
+        
+        DB::unprepared($seed_blog_posts_sql);
+        DB::unprepared($seed_past_events_sql);
+        DB::unprepared($seed_partnerships_sql);
     }
 }
