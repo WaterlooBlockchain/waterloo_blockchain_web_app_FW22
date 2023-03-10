@@ -26,7 +26,8 @@
                     'src' => $latest_post->image,
                     'title' => $latest_post->title,
                     'tags' => explode(",", $latest_post->tags),
-                    'content' => $latest_post->content
+                    'content' => $latest_post->content,
+                    'isFeatured' => $latest_post->isFeatured
                     ])
                 <a href='/blog' class="see_more_posts">See More Posts &gt;</a>
             </div>
@@ -74,6 +75,7 @@
             @foreach ($blog_posts as $post)
                 @include('components.post', [
                 'theme' => 'dark',
+                'isFeatured' => $post->isFeatured,
                 'src' => $post->image,
                 'title' => $post->title,
                 'tags' => explode(",", $post->tags),
