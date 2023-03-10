@@ -17,7 +17,6 @@ BEGIN
     RETURN output_str;
 END;
 
-
 DROP FUNCTION IF EXISTS `desanitize_string`;
 CREATE FUNCTION desanitize_string(input_str LONGTEXT)
 RETURNS LONGTEXT

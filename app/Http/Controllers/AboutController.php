@@ -15,7 +15,17 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $past_events = DB::table('past_events')->orderByDesc('date')->get();
+        //$past_events = DB::table('past_events')->orderByDesc('date')->get();
+
+        $past_events = DB::select(
+            'SELECT
+                desanitize_string(title) as title,
+                date,
+                desanitize_string(content) as content,
+                desanitize_string(image) as image
+            FROM laravel.past_events
+            ORDER BY date DESC'
+        );
 
         return View::make('About')->with('past_events', $past_events);
     }

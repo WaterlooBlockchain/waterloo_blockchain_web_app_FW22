@@ -14,7 +14,16 @@ class ConnectController extends Controller
      */
     public function index()
     {
-        $partnerships = DB::table('partnerships')->orderByDesc('isCurrent')->get();
+        //$partnerships = DB::table('partnerships')->orderByDesc('isCurrent')->get();
+        $partnerships = DB::select(
+            'SELECT
+                desanitize_string(name) as name,
+                desanitize_string(link) as link,
+                isCurrent,
+                desanitize_string(image) as image
+            FROM laravel.partnerships
+            ORDER BY isCurrent DESC'
+        );
         
         return View::make('connect')
             ->with('partnerships', $partnerships);
