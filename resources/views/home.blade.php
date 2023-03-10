@@ -21,17 +21,14 @@
         <div class="main_post">
           <img class="read_article" src="{{asset('images/read_article.png')}}" ></img>
             <div class="post_body">
-            @include('components.post', [
-                'theme' => 'light',
-                'src' => asset('images/header_1.jpg'),
-                'title' => 'What is the Blockchain?',
-                'tags' => ['#Blockchain', '#Cryptocurrency'],
-                'content' => 'A blockchain is a system of transactions distributed across a network of computers. All blocks are connected to one another, and each block contains a number of transactions (a ledger).
-                
-                The ultimate goal of a blockchain is to allow digital information to be recorded and distributed, but to remain immutable. 
-               
-                This remarkable technology has several applications in numerous industries including travel, healthcare, real estate and especially decentralized finance (DeFi).'
-            ])
+                @include('components.post', [
+                    'theme' => 'light',
+                    'src' => $latest_post->image,
+                    'title' => $latest_post->title,
+                    'tags' => explode(",", $latest_post->tags),
+                    'content' => $latest_post->content,
+                    'isFeatured' => $latest_post->isFeatured
+                    ])
                 <a href='/blog' class="see_more_posts">See More Posts &gt;</a>
             </div>
         </div>
@@ -75,42 +72,16 @@
     <div class="blog_container">
           <h1 class="blog_title">Read Our Work</h1>
           <div class="blogs">
-          @include('components.post', [
+            @foreach ($blog_posts as $post)
+                @include('components.post', [
                 'theme' => 'dark',
-                'src' => asset('images/web.jpg'),
-                'title' => 'Web 2.0 vs Web 3.0',
-                'tags' => ['#Blockchain', '#Web2' , '#Web3'],
-                'isFeatured' => 0,
-                'content' => 'Web 2.0 and Web 3.0 are successive iterations of the web. Web 2.0 is the version that most people know and use today, which is the internet. The internet is where companies provide services to users in exchange for their data.
-
-                Web 2.0 developed the growth of user-generated content along with its compatibility and usability for users. Web 3.0 is built on the concept of decentralization which refers to a system where control is transferred from a central authority to a distributed network.
-               
-                In Web 3.0, decentralized apps are run on the blockchain and the apps allow users to participate without giving up their data.'
-            ])
-            @include('components.post', [
-                'theme' => 'dark',
-                'src' => asset('images/bitcoin.jpg'),
-                'title' => 'Bitcoin? What is it?',
-                'tags' => ['#Blockchain', '#Cryptocurrency', '#Bitcoin'],
-                'isFeatured' => 0,
-                'content' => 'Bitcoin is the first ever successful cryptocurrency and payment system to ever exist and it was first launched in 2009 by creator Satoshi Nakamoto who is a presumed pseudonymous person. 
-                
-                Bitcoin is a virtual currency that is designed to act as a form of money and payment that removes the need of a middleman in financial transactions. It can be rewarded to blockchain miners for their work on verifying transactions and it can also be bought on several exchanges.'
-            ])
-            @include('components.post', [
-                'theme' => 'dark',
-                'src' => asset('images/wallet.jpg'),
-                'title' => 'Crypto Wallet, More than an Address Book?',
-                'tags' => ['#Blockchain', '#Cryptocurrency', '#Technology'],
-                'isFeatured' => 0,
-                'content' => ' A crypto wallet is where users can keep their private keys and passwords to gain access to their cryptocurrencies. 
-                
-                Wallets can come in several forms such as Hardware wallets(ledger, usb stick), or mobile apps like coinbase. Crypto wallets are crucial to anyone that owns crypto currency. 
-                
-                Unlike regular wallets, crypto wallets do not store your crypto, which is live on the blockchain; however it keeps your private keys that provide the proof of ownership that users have on the crypto. 
-                
-                If the users lose their private keys then they lose access to their crypto, so keep your wallet secure!'
-            ])
+                'isFeatured' => $post->isFeatured,
+                'src' => $post->image,
+                'title' => $post->title,
+                'tags' => explode(",", $post->tags),
+                'content' => $post->content
+                ])
+            @endforeach
             </div>
             <a href='/blog' class="see_more_posts">See More Posts &gt;</a>
           </div>  

@@ -19,19 +19,16 @@ services:
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
   db:
-    image: mariadb:10.4
+    image: mysql:8.0
     restart: unless-stopped
     volumes:
-      - mariadb-data:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: mariadb
+      MYSQL_ROOT_PASSWORD: mysql
       MYSQL_DATABASE: laravel
-      MYSQL_USER: root
-      MYSQL_PASSWORD: mariadb
-
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: mysql
     # Add "forwardPorts": ["3306"] to **devcontainer.json** to forward MariaDB locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
-  redis:
-    image: redis:6.2-alpine
 volumes:
-  mariadb-data:
+  mysql-data:
