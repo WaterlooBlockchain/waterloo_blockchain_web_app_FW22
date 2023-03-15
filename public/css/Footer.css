@@ -6,18 +6,29 @@
     display: flex;
     column-gap: 3em;
     flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
+    
     bottom: 0;
+}
+
+.indent {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+    max-width: 1300px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left_div {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-    margin-top: 2em;
     width: 4.5em;
+
 }
 .text {
     color: #F0E9FB;
@@ -34,10 +45,16 @@
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    position: relative;
+    margin-left: 7px;
+
+    /* Bottom align copyright notice */
+    top: 6px
 }
 
 .line {
     display: inline-flex;
+    position: relative;
 }
 
 .blockchain {
@@ -50,13 +67,12 @@
 .socials {
     width: auto;
     display: inline-flex;
-    margin-left: 5em;
+    gap: 20px;
 }
 
 .socials_button {
     width: 4em;
     height: 4em;
-    margin-right: 2em;
     background-color: #E27876;
     border-radius: 50px;
     display: flex;
@@ -73,3 +89,33 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+    /* Add extra space for the sticky bottom navbar (only appears on small screens)
+    See Header.css for more context. */
+    .footer {
+        margin-bottom: 52px;
+        flex-direction: column;
+    }
+
+    /* Clear space-between styling and change to stacked */
+    .indent {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+    
+    /* Shrink everything a little on small phones */
+    .logo {
+        width: 4em;
+    }
+    .uwaterloo {
+        font-size: 1.5em;
+    }
+    .blockchain {
+        font-size: 2em;
+    }
+    .c {
+        font-size: 0.8em;
+    }
+}

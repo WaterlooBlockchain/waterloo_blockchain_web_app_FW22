@@ -9,8 +9,9 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/814d3142a2.js" crossorigin="anonymous"></script>
 
         <!-- Styles -->
@@ -18,8 +19,8 @@
         <style>
             body {
                 margin: 0px;
-                max-width: 100vw;
-                height: auto;
+                padding: 0px;
+                box-sizing: border-box;
                 background: linear-gradient(90deg, #180831, #30195d, #7A3ADF, #7A3ADF, #9866E6, #D3BDF4);
                 background-size: 300% 300%;
                 animation: gradient 60s ease infinite;
@@ -44,7 +45,7 @@
             <div class="header">
                 @include('components.header')
             </div>
-            <div class="content">
+            <div class="main">
                 @yield('content')
             </div>
             <div class="footer">

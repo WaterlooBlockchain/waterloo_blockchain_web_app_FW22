@@ -16,6 +16,7 @@ class HomeController extends Controller
         $blog_posts = DB::select(
         'SELECT 
             desanitize_string(title) as title,
+            isFeatured,
             desanitize_string(image) as image,
             desanitize_string(tags) as tags,
             desanitize_string(content) as content

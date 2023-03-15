@@ -1,0 +1,125 @@
+.connect_container {
+	width: 80%;
+	margin: auto;
+	max-width: 1300px;
+	display: flex;
+	flex-direction: column;
+}
+
+.connect_title {
+	align-self: center;
+	text-align: center;
+}
+.contact_title {
+	margin-bottom: 25px;
+}
+
+.connect_meet_subheading {
+	text-align: center;
+	color: #F0E9FB;
+	max-width: 600px;
+	margin: auto;
+}
+
+.connect_meet_grid {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin: 75px auto;
+	gap: 40px; 
+
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	justify-items: center;
+}
+
+
+.contact_container {
+	margin: auto;
+    background-color: #30195d;
+    border-radius: 1em;
+	padding: 4em 8em;
+    display:flex;
+    flex-direction: column;
+    row-gap: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+	margin-bottom: 120px;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	white-space: normal;
+	align-items: center;
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
+}
+.contacts > p, .contacts > a{
+    margin: 0;
+	font-size: 2em;
+	font-family: 'Montserrat', sans-serif;
+	color: #F0E9FB;
+	text-decoration: none;
+}
+
+.contacts > a:hover{
+    text-decoration: underline;
+}
+
+.partnership_container {
+    margin-top: 2em;
+	width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5em;
+    row-gap: 2.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.meet_team_title {
+	margin-top: 80px;
+}
+
+.sponser_container {
+    margin-bottom: 5em;
+}
+
+
+/* Small Screens */
+@media only screen and (max-width: 768px) {
+	.connect_container {
+		width: 90%;
+	}
+
+	.contact_container {
+		padding: 4em 2em;
+	}
+
+	.contacts > p, .contacts > a{
+		font-size:1.5em;
+	}
+}
+
+/* Phones */
+@media only screen and (max-width: 480px) {
+	.contacts > p, .contacts > a{
+		font-size:1.2em;
+	}
+}
+
+/* Extremely Small Screens */
+@media only screen and (max-width: 370px) {
+	
+	.connect_meet_grid {
+		/* Fit two rows on one screen */
+		column-gap: 18px;
+		row-gap: 28px;
+	}
+}
+

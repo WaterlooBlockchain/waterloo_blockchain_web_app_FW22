@@ -1,64 +1,77 @@
-.container {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	column-gap: 5em;
-}
 
-.body {
+
+.hero {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	column-gap: 10em;
+	margin: auto;
+	height: 650px;
+	margin-bottom: 100px;
+}
+
+.post_body .container_light {
+	width: 400px;
+}
+
+.home {
+	width: 80%;
+	margin: auto;
+	max-width: 1300px;
 }
 
 .intro {
 	width: 100%;
 	color: #F0E9FB;
 	text-shadow: 0px 2.92736px 5.85472px rgba(0, 0, 0, 0.25);
-	margin-left: 20em;
-	margin-top: -20em;
 }
 
 .blockchain_title {
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;	
+	font-weight: 300;	
     font-size: 3em;
 	letter-spacing: 0.1em;
-	margin-top: 10%;
-	margin-bottom: 5%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .uwaterloo_title {
-	margin-top: 0;
-	margin-bottom: 5%;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;	
-    font-size: 6em;
+	font-size: 6em;
+
 }
+
 
 .button {
 	background: #E27876;
 	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
-	border-radius: 1em;
-	width: 24em;
-	height: 4em;
-	display: flex;
-	justify-content: center;
-	align-items: center;  
-	margin-top: 3%;
+	border-radius: 12px;
+	margin: 10px 0px;
+	width: 350px;
+	display: inline;
+	padding: 20px 0px;
+	text-decoration: none;
+	text-align:center
 }
 
-.button_text {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;	
-    font-size: 1.5em;
+.button > p {
     color: #F0E9FB;
-    text-decoration: none;
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;	
+    font-size: 1.4em;
+	text-decoration: none;
+	vertical-align: middle;
+	margin: auto;
+}
+
+.button > * {
+	display: inline;
+	text-shadow: none;
+}
+
+.hero-buttons {
+	display: flex;
+	flex-direction: column;
 }
 
 .discord_icon {
@@ -71,67 +84,154 @@
 	cursor: pointer;
 }
 
-.button:hover > .button_text {
-	font-size: 1.65em;
+.button:hover  {
+	transform: scale(1.05);
 	transition-duration: 0.3s;
 }
 
-.main_post {
-	display: inline-flex;
-	column-gap: 2em;
-}
-
 .read_article {
-	width: 10em;	
-	height: auto;
-	margin-top: 10em;
+	width: 160px;
+	height: 130px;
+	position: absolute;
+	top: 250px;
+	left: -160px;
+	z-index: 1;
+}	
+
+.main_post{
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	/* Offset main post down a bit */
+	align-self: flex-end;
 }
 
-.see_more_posts {
+.about_title, .about_content {
 	color: #F0E9FB;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	font-size: 1em;
-	text-decoration: none;
-}
-
-.about_container {
-	width: 80em;
-	height: auto;
-	color: #F0E9FB;
-}
-
-.about_title {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	font-size: 2.5em;
-	color: #F0E9FB;
-}
-
-.about_content {
-	margin-top: -2em;
-	width: 60em;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	font-size: 1em;
 	line-height: 1.7em;
 }
 
-.panel_section {
-	display: inline-flex;
-	column-gap: 2em;
+.about_content {
+	font-size: 1em;
+}
+
+.about_container {
+	width: 80%;
+	margin-bottom: 50px;
 }
 
 .blog_title {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	font-size: 2.5em;
 	color: #F0E9FB;
+	line-height: 1.7em;
 }
 
-.blogs {
-	width: 100%;
-	height: auto;
+.panel_section, .blogs {
 	display: flex;
-	column-gap: 5em;
+	flex-direction: row;
+	width: 100%;
+	gap: 20px;
+	overflow-x: auto;
+	flex-basis: 400px;
+	flex-shrink: 0;
+}
+
+.blogs > .container_dark {
+	min-width: 400px;
+}
+
+.panel_section, .blog_container  {
+	margin-bottom: 120px;
+}
+
+/* Small Screens */
+@media only screen and (max-width: 768px) {
+   .read_article {
+	/* Move "read our most recent article" blob from left to top */
+	content: url("../images/read_article_small.png");
+	height: 75px;
+	width: auto;
+	top: 0px;
+	left: 0px;
+	margin-bottom: 5px;
+	position: relative;
+   }
+
+   .main_post{
+	/* Move "read our most recent article" blob from left to top */
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+	
+	.blockchain_title {
+		font-size: 2em;
+		align-self: center;
+	}
+
+	.uwaterloo_title {
+		font-size: 4em;
+		align-self: center;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+	.about_container {
+		width: 100%;
+	}
+
+	.panel_section, .blogs {
+		flex-direction: column;
+		overflow: auto;
+		align-items: center;
+		width: 100%;
+	}
+	
+	.home {
+		width: 90%;
+	}
+
+	.blogs > .container_dark {
+		width: 100%;
+		max-width: auto; 
+		min-width: auto;
+	}
+
+	.post_body .container_light {
+		width: 100%;
+	}
+
+}
+
+/* Phones */
+@media only screen and (max-width: 480px) {
+	.blockchain_title {
+		font-size: 1.5em;
+		align-self: center;
+	}
+
+	.uwaterloo_title {
+		font-size: 3em;
+		align-self: center;
+	}
+
+	.read_article  {
+		height: 55px;
+	}
+}
+
+/* Non-fullscreened desktop */
+@media only screen and (max-width: 1200px) {
+	/* Prevent overflow from side-by-side title and main post  */
+   .hero {
+	flex-direction: column;
+		height: auto;
+   }
+
+   
+	.intro {
+		display: flex;
+		flex-direction: column;
+	}
 }

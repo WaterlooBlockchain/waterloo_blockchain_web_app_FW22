@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 
-class AboutController extends Controller
+class PastEventsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,6 +27,6 @@ class AboutController extends Controller
             ORDER BY date DESC'
         );
 
-        return View::make('About')->with('past_events', $past_events);
+        return View::make('PastEvents')->with('past_events', $past_events);
     }
 }

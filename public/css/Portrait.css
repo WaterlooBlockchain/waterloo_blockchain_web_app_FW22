@@ -1,0 +1,31 @@
+.portrait_image {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    border: 5px solid #E27876;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.portrait {
+    display: inline-flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    text-decoration: none;
+}
+
+.portrait_name {
+    font-weight: 600;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: #F0E9FB;
+    margin-bottom: 2.5px;
+}
+
+.portrait_title {
+    font-weight: 300;
+    font-size: 0.75em;
+    font-family: 'Montserrat', sans-serif;
+    color: #F0E9FB;
+}

@@ -1,12 +1,3 @@
-.container {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	column-gap: 5em;
-}
-
 .about_container {
     margin-top: 10em;
 	width: 80em;
@@ -24,7 +15,7 @@
 .about_content {
 	width: 60em;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 1em;
 	line-height: 1.7em;
 }

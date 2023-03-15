@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ConnectController;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PastEventsController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::resources([
     '' => HomeController::class,
-    'about' => AboutController::class,
+    'events' => PastEventsController::class,
     'blog' => BlogController::class,
     'connect' => ConnectController::class
 ]);
