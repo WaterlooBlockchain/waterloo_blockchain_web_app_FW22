@@ -44,6 +44,6 @@ return new class extends Migration
         DB::unprepared("DROP PROCEDURE IF EXISTS GET_PAST_EVENTS;");
         DB::unprepared("DROP PROCEDURE IF EXISTS CREATE_PAST_EVENT;");
         DB::unprepared("DROP PROCEDURE IF EXISTS UPDATE_PAST_EVENT;");
-        DB::unprepared("DROP PROCEDURE IF EXISTS DELETE_PAST_EVENTS;");
+        DB::unprepared("DROP PROCEDURE IF EXISTS DELETE_PAST_EVENT;");
     }
 };
