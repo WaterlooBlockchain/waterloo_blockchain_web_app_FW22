@@ -9,11 +9,8 @@
                 <p class="uwaterloo">UWaterloo</p>
                 <div class="line">
                     <h1 class="blockchain">Blockchain</h1>
-                    <p class="c">© 2023</p>
+                    <p class="c">© {{ date('Y') }}</p>
                 </div>
-                    
-        
-
             </div>
         </div>
         <div class="socials">

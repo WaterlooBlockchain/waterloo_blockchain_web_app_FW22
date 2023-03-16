@@ -231,7 +231,7 @@ BEGIN
     WHERE 
         (p_id IS NULL OR id = p_id)
         AND (p_name IS NULL OR name = sanitize_string(p_title))
-        AND (p_link IS NULL OR link = p_link)
+        AND (p_link IS NULL OR link = sanitize_string(p_link))
         AND (p_isCurrent IS NULL OR isCurrent = p_isCurrent)
         AND (p_image IS NULL OR image = sanitize_string(p_image));
 END;
@@ -275,9 +275,9 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ID cannot be null';
     END IF;
 
-    SET s_link = COALESCE(sanitize_string(p_title), '');
-    SET s_image = COALESCE(sanitize_string(p_content), '');
-    SET s_name = COALESCE(sanitize_string(p_image), '');
+    SET s_link = COALESCE(sanitize_string(p_link), '');
+    SET s_image = COALESCE(sanitize_string(p_image), '');
+    SET s_name = COALESCE(sanitize_string(p_name), '');
 
     IF LENGTH(s_link) = 0 THEN
         SELECT link INTO s_link FROM laravel.partnerships WHERE id=p_id;
@@ -315,4 +315,144 @@ BEGIN
     END IF;
 
     DELETE FROM laravel.partnerships WHERE id=p_id;
+END;
+
+DROP PROCEDURE IF EXISTS GET_TEAM_MEMBERS;
+CREATE PROCEDURE GET_TEAM_MEMBERS (IN p_id INT, IN p_name LONGTEXT, IN p_role LONGTEXT, IN p_level INT, IN p_website LONGTEXT, IN p_telegram LONGTEXT, IN p_email LONGTEXT, IN p_linkedin LONGTEXT, IN p_image LONGTEXT)
+BEGIN
+    SELECT 
+        id, 
+        desanitize_string(name) AS name,
+        desanitize_string(role) AS role,
+        level,
+        desanitize_string(website) AS website,
+        desanitize_string(telegram) AS telegram,
+        desanitize_string(email) AS email,
+        desanitize_string(linkedin) AS linkedin,
+        desanitize_string(image) AS image,
+        created_at,
+        updated_at
+    FROM 
+        laravel.team_members
+    WHERE
+        (p_id IS NULL OR id = p_id)
+        AND (p_name IS NULL OR name = sanitize_string(p_name))
+        AND (p_role IS NULL OR role = sanitize_string(p_role))
+        AND (p_level IS NULL OR level = p_level)
+        AND (p_website IS NULL OR website = sanitize_string(p_website))
+        AND (p_telegram IS NULL OR telegram = sanitize_string(p_telegram))
+        AND (p_email IS NULL OR email = sanitize_string(p_email))
+        AND (p_linkedin IS NULL OR linkedin = sanitize_string(p_linkedin))
+        AND (p_image IS NULL OR image = sanitize_string(p_image));
+END;
+
+DROP PROCEDURE IF EXISTS CREATE_TEAM_MEMBER;
+CREATE PROCEDURE CREATE_TEAM_MEMBER (IN p_name LONGTEXT, IN p_role LONGTEXT, IN p_level INT, IN p_website LONGTEXT, IN p_telegram LONGTEXT, IN p_email LONGTEXT, IN p_linkedin LONGTEXT, IN p_image LONGTEXT)
+BEGIN
+    DECLARE s_image LONGTEXT;
+    DECLARE s_name LONGTEXT;
+    DECLARE s_role LONGTEXT;
+
+    IF p_image IS NULL OR LENGTH(p_image) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Team Member content cannot be null or an empty string';
+    END IF;
+
+    IF p_name IS NULL OR LENGTH(p_name) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Team Member name cannot be null or an empty string';
+    END IF;
+
+    IF p_role IS NULL OR LENGTH(p_role) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Team Member role cannot be null or an empty string';
+    END IF;
+
+    IF p_level IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Team Member level cannot be null or an empty string';
+    END IF;
+   
+    SET s_image = sanitize_string(p_image);
+    SET s_name = sanitize_string(p_name);
+    SET s_role = sanitize_string(p_role);
+   
+    INSERT INTO laravel.team_members (name, role, level, website, telegram, email, linkedin, image)
+    VALUES (s_name, s_role, p_level, sanitize_string(p_website), sanitize_string(p_telegram), sanitize_string(p_email), sanitize_string(p_linkedin), s_image);
+END;
+
+DROP PROCEDURE IF EXISTS UPDATE_TEAM_MEMBER;
+CREATE PROCEDURE UPDATE_TEAM_MEMBER (IN p_id INT, IN p_name LONGTEXT, IN p_role LONGTEXT, IN p_level INT, IN p_website LONGTEXT, IN p_telegram LONGTEXT, IN p_email LONGTEXT, IN p_linkedin LONGTEXT, IN p_image LONGTEXT)
+BEGIN
+    
+    DECLARE s_name LONGTEXT;
+    DECLARE s_role LONGTEXT;
+    DECLARE s_level INT;
+    DECLARE s_website LONGTEXT;
+    DECLARE s_telegram LONGTEXT;
+    DECLARE s_email LONGTEXT;
+    DECLARE s_linkedin LONGTEXT;
+    DECLARE s_image LONGTEXT;
+
+    IF p_id IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ID cannot be null';
+    END IF;
+
+    SET s_name = COALESCE(sanitize_string(p_name), '');
+    SET s_role = COALESCE(sanitize_string(p_role), '');
+    SET s_level = COALESCE(p_level, '');
+    SET s_website = COALESCE(sanitize_string(p_website), '');
+    SET s_telegram = COALESCE(sanitize_string(p_telegram), '');
+    SET s_email = COALESCE(sanitize_string(p_email), '');
+    SET s_linkedin = COALESCE(sanitize_string(p_linkedin), '');
+    SET s_image = COALESCE(sanitize_string(p_image), '');
+    
+    IF LENGTH(s_name) = 0 THEN
+        SELECT name INTO s_name FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_role) = 0 THEN
+        SELECT role INTO s_role FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_level) = 0 THEN
+        SELECT level INTO s_level FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_website) = 0 THEN
+        SELECT website INTO s_website FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_telegram) = 0 THEN
+        SELECT telegram INTO s_telegram FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_email) = 0 THEN
+        SELECT email INTO s_email FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_linkedin) = 0 THEN
+        SELECT linkedin INTO s_linkedin FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_image) = 0 THEN
+        SELECT image INTO s_image FROM laravel.team_members WHERE id=p_id;
+    END IF;
+
+    UPDATE laravel.team_members
+        SET name = s_name,
+            role = s_role,
+            level = s_level,
+            website = s_website,
+            telegram = s_telegram,
+            email = s_email,
+            linkedin = s_linkedin,
+            image = s_image
+    WHERE id = p_id;
+END;
+
+DROP PROCEDURE IF EXISTS DELETE_TEAM_MEMBER;
+CREATE PROCEDURE DELETE_TEAM_MEMBER (IN p_id BIGINT)
+BEGIN
+    IF p_id IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ID cannot be null';
+    END IF;
+
+    DELETE FROM laravel.team_members WHERE id=p_id;
 END;
