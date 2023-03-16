@@ -36,9 +36,14 @@ return new class extends Migration
         DB::unprepared("DROP PROCEDURE IF EXISTS UPDATE_BLOG_POST;");
         DB::unprepared("DROP PROCEDURE IF EXISTS DELETE_BLOG_POST;");
 
+        DB::unprepared("DROP PROCEDURE IF EXISTS GET_TEAM_MEMBERS;");
+        DB::unprepared("DROP PROCEDURE IF EXISTS CREATE_TEAM_MEMBER;");
+        DB::unprepared("DROP PROCEDURE IF EXISTS UPDATE_TEAM_MEMBER;");
+        DB::unprepared("DROP PROCEDURE IF EXISTS DELETE_TEAM_MEMBER;");
+
         DB::unprepared("DROP PROCEDURE IF EXISTS GET_PAST_EVENTS;");
         DB::unprepared("DROP PROCEDURE IF EXISTS CREATE_PAST_EVENT;");
         DB::unprepared("DROP PROCEDURE IF EXISTS UPDATE_PAST_EVENT;");
-        DB::unprepared("DROP PROCEDURE IF EXISTS DELETE_PAST_EVENT;");
+        DB::unprepared("DROP PROCEDURE IF EXISTS DELETE_PAST_EVENTS;");
     }
 };
