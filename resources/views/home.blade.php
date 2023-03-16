@@ -9,13 +9,18 @@
             <h1 class="uwaterloo_title title">UWaterloo</h1>
 
             <div class="hero-buttons">
-                <a class="button" href='https://discord.gg/Wk8n4MTMwf'>
-                    <p>Join the Community<p>
-                    <div class="fa-brands fa-discord fa-xl discord_icon"></div>
-                </a>
-                <a class="button" href='https://vote.uwblockchain.ca/#/'  target="_blank" rel="noreferrer">
-                    <p>Vote on Proposals<p>
-                </a>
+                @foreach($socials as $social)
+                    @if ($social->name == 'Discord')
+                        <a class="button" href='{{$social->link}}'>
+                            <p>Join the Community<p>
+                            <div class="fa-brands fa-discord fa-xl discord_icon"></div>
+                        </a>
+                    @elseif ($social->name == 'Voting')
+                        <a class="button" href='{{$social->link}}' target="_blank" rel="noreferrer">
+                            <p>Vote on Proposals<p>
+                        </a>
+                    @endif
+                @endforeach
             </div>
         </div>
         <div class="main_post">

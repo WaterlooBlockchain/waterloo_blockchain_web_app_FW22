@@ -24,12 +24,14 @@ class DatabaseSeeder extends Seeder
 
         $seed_blog_posts_sql = file_get_contents(database_path('seeds/blog_posts.sql'));
         $seed_past_events_sql = file_get_contents(database_path('seeds/past_events.sql'));
-        $seed_partnerships_sql = file_get_contents(database_path(('seeds/partnerships.sql')));
-        $seed_team_members_sql = file_get_contents(database_path(('seeds/team_members.sql')));
+        $seed_partnerships_sql = file_get_contents(database_path('seeds/partnerships.sql'));
+        $seed_team_members_sql = file_get_contents(database_path('seeds/team_members.sql'));
+        $seed_socials_sql = file_get_contents(database_path('seeds/socials.sql'));
 
         DB::unprepared($seed_blog_posts_sql);
         DB::unprepared($seed_past_events_sql);
         DB::unprepared($seed_partnerships_sql);
         DB::unprepared($seed_team_members_sql);
+        DB::unprepared($seed_socials_sql);
     }
 }

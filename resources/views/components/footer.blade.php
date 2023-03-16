@@ -14,10 +14,11 @@
             </div>
         </div>
         <div class="socials">
-            <div class="socials_button"><a href='https://mobile.twitter.com/uw_blockchain' target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter fa-2xl icons"></i></a></div>
-            <div class="socials_button"><a href='https://www.instagram.com/blockchainuw/' target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram fa-2xl icons"></i></a></div>
-            <div class="socials_button"><a href='https://www.linkedin.com/company/uwblockchainclub/?originalSubdomain=ch' target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin fa-2xl icons"></i></a></div>
-            <div class="socials_button"><a href='https://discord.gg/YCBA3n7Xn8' target="_blank" rel="noreferrer"><i class="fa-brands fa-discord fa-2xl icons"></i></a></div>
+            @foreach ($socials as $social)
+                @if ($social->name != 'Voting')
+                    <div class="socials_button"><a href='{{$social->link}}' target="_blank" rel="noreferrer"><i class="{{$social->icon}}"></i></a></div>
+                @endif
+            @endforeach
         </div>
     </div>
 </div>

@@ -27,6 +27,17 @@ class PastEventsController extends Controller
             ORDER BY date DESC'
         );
 
-        return View::make('PastEvents')->with('past_events', $past_events);
+        $socials = DB::select(
+            'SELECT
+                desanitize_string(name) as name,
+                desanitize_string(link) as link,
+                desanitize_string(icon) as icon
+            FROM laravel.socials
+            WHERE name != "Voting"
+            ');
+
+        return View::make('PastEvents')
+            ->with('past_events', $past_events)
+            ->with('socials', $socials);
     }
 }
