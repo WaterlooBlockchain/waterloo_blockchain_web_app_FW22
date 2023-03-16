@@ -25,9 +25,20 @@ class HomeController extends Controller
         ORDER BY id DESC 
         LIMIT ?
         ', [FALSE, 4]);
+
+        $socials = DB::select(
+        'SELECT
+            desanitize_string(name) as name,
+            desanitize_string(link) as link,
+            desanitize_string(icon) as icon
+        FROM laravel.socials
+        ');
+
+        
         
         return View::make('home')
             ->with('blog_posts', array_slice($blog_posts, 1, 3))
-            ->with('latest_post', $blog_posts[0]);
+            ->with('latest_post', $blog_posts[0])
+            ->with('socials', $socials);
     }
 }

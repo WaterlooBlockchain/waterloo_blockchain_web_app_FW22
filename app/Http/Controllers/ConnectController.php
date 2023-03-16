@@ -34,9 +34,20 @@ class ConnectController extends Controller
             FROM laravel.team_members tm
             ORDER BY level'
         );
+
+        $socials = DB::select(
+            'SELECT
+                desanitize_string(name) as name,
+                desanitize_string(text) as text,
+                desanitize_string(link) as link,
+                desanitize_string(icon) as icon
+            FROM laravel.socials
+            WHERE name != "Voting"'
+        );
         
         return View::make('connect')
             ->with('partnerships', $partnerships)
-            ->with('team_members', $team_members);
+            ->with('team_members', $team_members)
+            ->with('socials', $socials);
     }
 }

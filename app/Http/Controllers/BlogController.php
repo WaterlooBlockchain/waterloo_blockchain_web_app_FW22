@@ -24,8 +24,18 @@ class BlogController extends Controller
             WHERE id <> (SELECT MAX(id) FROM laravel.blog_posts WHERE isFeatured=FALSE)
             ORDER BY id
         ');
+
+        $socials = DB::select(
+            'SELECT
+                desanitize_string(name) as name,
+                desanitize_string(link) as link,
+                desanitize_string(icon) as icon
+            FROM laravel.socials
+            WHERE name != "Email" or name != "Voting"
+        ');
         
         return View::make('Blog')
-            ->with('blog_posts', $blog_posts);
+            ->with('blog_posts', $blog_posts)
+            ->with('socials', $socials);
     }
 }

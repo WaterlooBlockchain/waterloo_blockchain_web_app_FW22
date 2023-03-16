@@ -456,3 +456,109 @@ BEGIN
 
     DELETE FROM laravel.team_members WHERE id=p_id;
 END;
+
+DROP PROCEDURE IF EXISTS GET_SOCIALS;
+CREATE PROCEDURE GET_SOCIALS (IN p_id INT, IN p_name LONGTEXT, IN p_text LONGTEXT, IN p_link LONGTEXT, IN p_icon LONGTEXT)
+BEGIN
+    SELECT 
+        id, 
+        desanitize_string(name) AS name,
+        desanitize_string(text) AS text,
+        desanitize_string(link) AS link,
+        desanitize_string(icon) AS icon,
+        created_at,
+        updated_at
+    FROM 
+        laravel.socials
+    WHERE
+        (p_id IS NULL OR id = p_id)
+        AND (p_name IS NULL OR name = sanitize_string(p_name))
+        AND (p_text IS NULL OR text = sanitize_string(p_text))
+        AND (p_link IS NULL OR link = sanitize_string(p_link))
+        AND (p_icon IS NULL OR icon = sanitize_string(p_icon));
+END;
+
+DROP PROCEDURE IF EXISTS CREATE_SOCIAL;
+CREATE PROCEDURE CREATE_SOCIAL (IN p_name LONGTEXT, IN p_text LONGTEXT, IN p_link LONGTEXT, IN p_icon LONGTEXT)
+BEGIN
+    DECLARE s_name LONGTEXT;
+    DECLARE s_text LONGTEXT;
+    DECLARE s_link LONGTEXT;
+    DECLARE s_icon LONGTEXT;
+
+    IF p_name IS NULL OR LENGTH(p_name) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Social name cannot be null or an empty string';
+    END IF;
+
+    IF p_text IS NULL OR LENGTH(p_text) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Social text cannot be null or an empty string';
+    END IF;
+
+    IF p_link IS NULL OR LENGTH(p_link) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Social link cannot be null or an empty string';
+    END IF;
+
+    IF p_icon IS NULL OR LENGTH(p_icon) = 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Social icon cannot be null or an empty string';
+    END IF;
+   
+    SET s_name = sanitize_string(p_name);
+    SET s_text = sanitize_string(p_text);
+    SET s_link = sanitize_string(p_link);
+    SET s_icon = sanitize_string(p_icon);
+   
+    INSERT INTO laravel.socials (name, text, link, icon)
+    VALUES (s_name, s_text, s_link, s_icon);
+END;
+
+DROP PROCEDURE IF EXISTS UPDATE_SOCIAL;
+CREATE PROCEDURE UPDATE_SOCIAL (IN p_id INT, IN p_name LONGTEXT, IN p_text LONGTEXT, IN p_link LONGTEXT, IN p_icon LONGTEXT)
+BEGIN
+    
+    DECLARE s_name LONGTEXT;
+    DECLARE s_text LONGTEXT;
+    DECLARE s_link LONGTEXT;
+    DECLARE s_icon LONGTEXT;
+
+    IF p_id IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ID cannot be null';
+    END IF;
+
+    SET s_name = COALESCE(sanitize_string(p_name), '');
+    SET s_text = COALESCE(sanitize_string(p_text), '');
+    SET s_link = COALESCE(sanitize_string(p_link), '');
+    SET s_icon = COALESCE(sanitize_string(p_icon), '');
+    
+    IF LENGTH(s_name) = 0 THEN
+        SELECT name INTO s_name FROM laravel.socials WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_text) = 0 THEN
+        SELECT text INTO s_text FROM laravel.socials WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_link) = 0 THEN
+        SELECT link INTO s_link FROM laravel.socials WHERE id=p_id;
+    END IF;
+
+    IF LENGTH(s_icon) = 0 THEN
+        SELECT icon INTO s_icon FROM laravel.socials WHERE id=p_id;
+    END IF;
+
+    UPDATE laravel.socials
+        SET name = s_name,
+            text = s_text,
+            link = s_link,
+            icon = s_icon
+    WHERE id = p_id;
+END;
+
+DROP PROCEDURE IF EXISTS DELETE_SOCIAL;
+CREATE PROCEDURE DELETE_SOCIAL (IN p_id BIGINT)
+BEGIN
+    IF p_id IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ID cannot be null';
+    END IF;
+
+    DELETE FROM laravel.socials WHERE id=p_id;
+END;
