@@ -31,7 +31,7 @@ class BlogController extends Controller
                 desanitize_string(link) as link,
                 desanitize_string(icon) as icon
             FROM laravel.socials
-            WHERE name != "Email" or name != "Voting"
+            WHERE name != "Voting"
         ');
         
         return View::make('Blog')
