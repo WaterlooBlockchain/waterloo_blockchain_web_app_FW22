@@ -29,7 +29,7 @@ The main advantage of using devcontainers is to insure a consistent development 
 1. Open the project in VSCode
 2. If it's the first time launching the project (missing .env file) please execute these steps before opening the project in a devcontainer
     - ```cp .env.example .env```
-    - Change DB_PASSWORD to DB_PASSWORD=mariadb
+    - Change DB_PASSWORD to DB_PASSWORD=mysql
     - Launch the container
 3. After the container has started:
     - All the dependencies should be installed automatically
