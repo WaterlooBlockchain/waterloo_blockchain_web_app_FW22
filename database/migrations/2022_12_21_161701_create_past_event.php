@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('past_events', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->longText('title');
             $table->date('date');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
 
-        Schema::create('past_events_backup', function (Blueprint $table) {
+        Schema::create('events_backup', function (Blueprint $table) {
             $table->id();
             $table->longText('title');
             $table->date('date');
@@ -36,22 +36,22 @@ return new class extends Migration
 
          // Create the backup trigger for that table before update
          DB::unprepared("
-         CREATE TRIGGER backup_past_event_before_update
+         CREATE TRIGGER backup_event_before_update
              BEFORE UPDATE 
-             ON past_events FOR EACH ROW
+             ON events FOR EACH ROW
          BEGIN	
-             INSERT INTO past_events_backup(title, date, content, image)
+             INSERT INTO events_backup(title, date, content, image)
              VALUES(old.title, old.date, old.content, old.image);
          END;
          ");
 
          // Create the backup trigger for that table after insert
         DB::unprepared("
-        CREATE TRIGGER backup_past_event_after_insert
+        CREATE TRIGGER backup_event_after_insert
             AFTER INSERT 
-            ON past_events FOR EACH ROW
+            ON events FOR EACH ROW
         BEGIN	
-            INSERT INTO past_events_backup(title, date, content, image)
+            INSERT INTO events_backup(title, date, content, image)
             VALUES(NEW.title, NEW.date, NEW.content, NEW.image);
         END;
         ");
@@ -64,8 +64,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('past_event');
-        DB::unprepared('DROP TRIGGER IF EXISTS `backup_past_event_before_update`;');
-        DB::unprepared('DROP TRIGGER IF EXISTS `backup_past_event_after_insert`;');
+        Schema::dropIfExists('event');
+        DB::unprepared('DROP TRIGGER IF EXISTS `backup_event_before_update`;');
+        DB::unprepared('DROP TRIGGER IF EXISTS `backup_event_after_insert`;');
     }
 };

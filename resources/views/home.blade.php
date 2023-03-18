@@ -65,15 +65,6 @@
             ])
     </div>
     
-    <!-- <div class="past_events_container">
-        @include('components.past_events', [
-            'icon' => "sample.jpg",
-            'title' => "NEAR Smart Contract Workshop",
-            'date' => "02/16/2023",
-            'content' => "Learned how to create smart contracts in Rust on the NEAR blockchian.",
-            'image' => "sample.jpg"
-        ])
-    </div> -->
     <div class="blog_container">
           <h1 class="blog_title">Read Our Work</h1>
           <div class="blogs">

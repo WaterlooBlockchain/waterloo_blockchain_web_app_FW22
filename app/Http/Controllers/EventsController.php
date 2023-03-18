@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 
-class PastEventsController extends Controller
+class EventsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,15 +15,15 @@ class PastEventsController extends Controller
      */
     public function index()
     {
-        //$past_events = DB::table('past_events')->orderByDesc('date')->get();
+        //$events = DB::table('events')->orderByDesc('date')->get();
 
-        $past_events = DB::select(
+        $events = DB::select(
             'SELECT
                 desanitize_string(title) as title,
                 date,
                 desanitize_string(content) as content,
                 desanitize_string(image) as image
-            FROM laravel.past_events
+            FROM laravel.events
             ORDER BY date DESC'
         );
 
@@ -36,8 +36,8 @@ class PastEventsController extends Controller
             WHERE name != "Voting"
             ');
 
-        return View::make('PastEvents')
-            ->with('past_events', $past_events)
+        return View::make('Events')
+            ->with('events', $events)
             ->with('socials', $socials);
     }
 }

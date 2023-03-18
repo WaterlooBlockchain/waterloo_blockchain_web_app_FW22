@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PastEvent extends Model
+class Event extends Model
 {
     protected $event = [
         'icon',

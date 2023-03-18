@@ -1,0 +1,15 @@
+.events_coming_soon {
+    color: white;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 1000px;
+    font-size: 60px;
+}
+
+.events_container {
+	width: 80%;
+	margin: auto;
+	max-width: 1300px;
+    flex-direction: column;
+    display: flex;
+}
