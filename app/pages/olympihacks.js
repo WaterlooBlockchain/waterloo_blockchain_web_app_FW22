@@ -80,6 +80,8 @@ export default function Home() {
             <div className={styles.sponsors}>
                 <Partnership src='/solana.svg' link='https://solana.com/'></Partnership>
                 <Partnership src='/jackal.svg' link='https://jackalprotocol.com/'></Partnership>
+                <Partnership src='/axelar.png' link='https://axelar.network/'></Partnership>
+                <Partnership src='/quantstamp.png' link='https://quantstamp.com/'></Partnership>
             </div>
             <div className={styles.title}><h1>Past Sponsors</h1></div>
             <div className={styles.partnership_container}>
