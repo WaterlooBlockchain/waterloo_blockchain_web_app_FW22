@@ -29,26 +29,28 @@ export default function Connect() {
               <FaDiscord></FaDiscord><a href='https://discord.gg/PW9HjVp4G6' target="_blank" rel="noreferrer">Join Discord</a>
               </div>
               <div className={styles.contacts}>
-              <FaInstagram></FaInstagram><a href='https://www.instagram.com/blockchainuw/' target="_blank" rel="noreferrer">@blockchainuw</a>
+              <FaInstagram></FaInstagram><a href='https://www.instagram.com/waterlooblockchain/' target="_blank" rel="noreferrer">@waterlooblockchain</a>
               </div>
               <div className={styles.contacts}>
-              <FaTwitter></FaTwitter><a href='https://twitter.com/uw_blockchain' target="_blank" rel="noreferrer">@uw_blockchain</a>
+              <FaTwitter></FaTwitter><a href='https://twitter.com/waterlooblockchain' target="_blank" rel="noreferrer">@WaterlooBlockchain</a>
               </div>
               <div className={styles.contacts}>
-              <FaLinkedin></FaLinkedin><a href='https://www.linkedin.com/company/uwblockchainclub/' target="_blank" rel="noreferrer">University of Waterloo Blockchain Club</a>
+              <FaLinkedin></FaLinkedin><a href='https://www.linkedin.com/company/waterlooblockchain/' target="_blank" rel="noreferrer">Waterloo Blockchain</a>
               </div>
             </div>
             <h1 className={styles.partnership_title}>Past Partnerships</h1>
             <div className={styles.partnership_container}>
               <Partnership src='/binance.svg' link='https://www.binance.com/en'></Partnership>
+              <Partnership src='/jackal.svg' link='https://jackalprotocol.com/'></Partnership>
+              <Partnership src='/hedera.png' link='https://hedera.com/' name='Hedera'></Partnership>
               <Partnership src='https://assets.website-files.com/62cf2791756a0740d63fff00/6305b597261554d0fa0058a4_Mark-Solid-Grey.png' name='Sonr' link='https://sonr.io/'></Partnership>
               <Partnership src='https://docs.axelar.dev/_next/image?url=%2Flogo%2Flogo.png&w=32&q=75' name='Axelar' link='https://axelar.network/'></Partnership>
               <Partnership src='https://learnweb3.io/brand/logo-blue.png' link='https://learnweb3.io/'></Partnership>
-              <Partnership src='https://hypotenuse.ca/img/navbar-logo2.png' name='Hypotenuse Labs' link='https://hypotenuse.ca/'></Partnership>
+              <Partnership src='https://hypotenuse.ca/img/navbar-logo.png' link='https://hypotenuse.ca/' name='Hypotenuse'></Partnership>
               <Partnership src='https://www.rbcroyalbank.com/dvl/v1.0/assets/images/logos/rbc-logo-shield.svg' name='Royal Bank of Canada' link='https://www.rbcroyalbank.com/personal.html'></Partnership>
               <Partnership src='https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg' link='https://www.coinbase.com/'></Partnership>
             </div>
-            <div className={styles.sponser_container}>
+            <div className={styles.sponsor_container}>
             <Sponser></Sponser>
             </div>
             

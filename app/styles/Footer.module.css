@@ -4,6 +4,7 @@
     position: relative;
     background-color:#2C1C4B;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 3em;
     flex-shrink: 0;
     justify-content: center;
@@ -55,8 +56,8 @@
 }
 
 .socials_button {
-    width: 4em;
-    height: 4em;
+    width: 2em;
+    height: 2em;
     margin-right: 2em;
     background-color: #E27876;
     border-radius: 50px;
@@ -65,12 +66,29 @@
     align-items: center;
 }
 
+@media screen and (min-width: 780px) {
+    .socials_button {
+        width: 4em;
+        height: 4em;
+    }
+}
+
+
 
 .icons {
-    width: 2em;
+    width: 1em;
     height: auto;
     color: #F0E9FB;
 }
+
+@media screen and (min-width: 780px) {
+    .icons {
+        width: 2em;
+        height: auto;
+    }
+}
+
+
 
 .icons:hover {
     cursor: pointer;
