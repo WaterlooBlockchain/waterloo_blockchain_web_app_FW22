@@ -31,6 +31,7 @@ export default function Home() {
                 <p className={styles.text}>Improvise, adapt, overcome. Olympians advancing the adoption of technology.</p>
                 <div className={styles.application}>
                     <a href="https://forms.gle/trC324ictJDSq4wJ6">Apply To Hack!</a>
+                    <a href="https://forms.gle/VzyXtQisLUVLxLT26">Volunteer!</a>
                 </div>
             </div>
         </div>
@@ -74,12 +75,21 @@ export default function Home() {
             </div>
         </div>
         <main className={styles.main}>
+            <h1 className={styles.title}>Already applied?</h1>
+            <div className={styles.application}>
+                <a href='https://forms.gle/thujbTwx8uZLoAPd7'>Apply for a travel subsidy</a>
+            </div>
+        </main>
+        <br />
+        <main className={styles.main}>
             <div className={styles.title}>
                 <h1>Current Sponsors</h1>
             </div>
             <div className={styles.sponsors}>
                 <Partnership src='/solana.svg' link='https://solana.com/'></Partnership>
                 <Partnership src='/jackal.svg' link='https://jackalprotocol.com/'></Partnership>
+                <Partnership src='/axelar.png' link='https://axelar.network/'></Partnership>
+                <Partnership src='/quantstamp.png' link='https://quantstamp.com/'></Partnership>
             </div>
             <div className={styles.title}><h1>Past Sponsors</h1></div>
             <div className={styles.partnership_container}>

@@ -39,6 +39,9 @@ export default function Home() {
           <div className={styles.button}>
               <a href='https://vote.uwblockchain.ca/#/' target="_blank" rel="noreferrer" className={styles.button_text}>Vote on Proposals</a>
           </div>
+          <div className={styles.button}>
+          <a href='https://forms.gle/tNYGfB8xkuvG7K4s6' target="_blank" rel="noreferrer" className={styles.button_text}>Solidity Bootcamp</a>
+          </div>
         </div>
         <div className={styles.read_article}><Image src='/read_article.png' width={1800} height={1700} layout={'responsive'}></Image></div>
         <div className={styles.main_post}>
@@ -60,7 +63,7 @@ export default function Home() {
             <p className={styles.about_content}>
             Our mission is to bring together a community of passionate individuals to explore and work in blockchain ecosystems like Web3 companies or their own startup. We facilitate and promote growth through events, including technical workshops, meetups with industry experts, and supporting student attendance at conferences. We are nurturing Waterloo&apos;s blockchain community, creating spaces for new connections and exchanging ideas through events. 
             </p>
-          </div>
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRrd1QvThWGWWjQZDGpmEY_Z8rqfPD_fpJDI_5NjtZ0iAZdVybe0BpUgCK3Cs3v76wpCIlrVYGb2URB/embed?start=true&loop=true&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>          </div>
           <div className={styles.panel_container}>
             <Panel
               icon={<BsPeopleFill className={styles.icon}/>}
