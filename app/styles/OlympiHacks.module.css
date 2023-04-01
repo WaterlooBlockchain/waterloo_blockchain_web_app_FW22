@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10%;
   }
   
   .body {
@@ -70,12 +71,15 @@
 .application {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .application > a {
     font-family: 'Montserrat Light';
-    font-size: 2vw;
+    font-size: 2em;
     text-decoration: underline;
+    color: white;
 }
 
 .text {
@@ -131,7 +135,6 @@
     font-family: 'Montserrat Bold';
     font-size: 2vw;
     line-height: 130%;
-    margin-bottom: 5%;
 }
 
 .partnership_container {

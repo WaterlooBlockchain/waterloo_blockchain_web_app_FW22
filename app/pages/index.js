@@ -39,6 +39,9 @@ export default function Home() {
           <div className={styles.button}>
               <a href='https://vote.uwblockchain.ca/#/' target="_blank" rel="noreferrer" className={styles.button_text}>Vote on Proposals</a>
           </div>
+          <div className={styles.button}>
+          <a href='https://forms.gle/tNYGfB8xkuvG7K4s6' target="_blank" rel="noreferrer" className={styles.button_text}>Solidity Bootcamp</a>
+          </div>
         </div>
         <div className={styles.read_article}><Image src='/read_article.png' width={1800} height={1700} layout={'responsive'}></Image></div>
         <div className={styles.main_post}>

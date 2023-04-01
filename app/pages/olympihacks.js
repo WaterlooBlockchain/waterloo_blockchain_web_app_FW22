@@ -31,6 +31,7 @@ export default function Home() {
                 <p className={styles.text}>Improvise, adapt, overcome. Olympians advancing the adoption of technology.</p>
                 <div className={styles.application}>
                     <a href="https://forms.gle/trC324ictJDSq4wJ6">Apply To Hack!</a>
+                    <a href="https://forms.gle/VzyXtQisLUVLxLT26">Volunteer!</a>
                 </div>
             </div>
         </div>
@@ -73,6 +74,13 @@ export default function Home() {
                 <Image className={styles.e7} src='/e7.jpg' width={4000} height={3000} layout='responsive' alt='binance event photo'></Image>
             </div>
         </div>
+        <main className={styles.main}>
+            <h1 className={styles.title}>Already applied?</h1>
+            <div className={styles.application}>
+                <a href='https://forms.gle/thujbTwx8uZLoAPd7'>Apply for a travel subsidy</a>
+            </div>
+        </main>
+        <br />
         <main className={styles.main}>
             <div className={styles.title}>
                 <h1>Current Sponsors</h1>
