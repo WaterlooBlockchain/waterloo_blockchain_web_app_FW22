@@ -30,11 +30,27 @@ export default function Home() {
                 <h1 className={styles.olympihacks}>OlympiHacks</h1>
                 <p className={styles.text}>Improvise, adapt, overcome. Olympians advancing the adoption of technology.</p>
                 <div className={styles.application}>
-                    <a href="https://forms.gle/trC324ictJDSq4wJ6">Apply To Hack!</a>
-                    <a href="https://forms.gle/VzyXtQisLUVLxLT26">Volunteer!</a>
+                    <div className={styles.button}>
+                        <a className={styles.button_text} href="https://forms.gle/trC324ictJDSq4wJ6">Apply To Hack!</a>
+                    </div>
+                    <div className={styles.button}>
+                        <a className={styles.button_text} href="https://forms.gle/VzyXtQisLUVLxLT26">Volunteer!</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <main className={styles.main}>
+            <h1 className={styles.title}>Already applied? Check these out:</h1>
+            <div className={styles.button}>
+                <a className={styles.button_text} href="https://forms.gle/thujbTwx8uZLoAPd7">Travel Subsidy Form</a>
+            </div>
+            <div className={styles.button}>
+                <a className={styles.button_text} href="https://olympihacks.devpost.com/">DevPost</a>
+            </div>
+            <div className={styles.button}>
+                <a className={styles.button_text} href="https://discord.gg/JVpgUwPNTt">Discord</a>
+            </div>
+        </main>
       </main>
         <div className={styles.leftContainer}>
             <div className={styles.leftText}>
@@ -74,12 +90,6 @@ export default function Home() {
                 <Image className={styles.e7} src='/e7.jpg' width={4000} height={3000} layout='responsive' alt='binance event photo'></Image>
             </div>
         </div>
-        <main className={styles.main}>
-            <h1 className={styles.title}>Already applied?</h1>
-            <div className={styles.application}>
-                <a href='https://forms.gle/thujbTwx8uZLoAPd7'>Apply for a travel subsidy</a>
-            </div>
-        </main>
         <br />
         <main className={styles.main}>
             <div className={styles.title}>
@@ -90,6 +100,8 @@ export default function Home() {
                 <Partnership src='/jackal.svg' link='https://jackalprotocol.com/'></Partnership>
                 <Partnership src='/axelar.png' link='https://axelar.network/'></Partnership>
                 <Partnership src='/quantstamp.png' link='https://quantstamp.com/'></Partnership>
+                <Partnership src='/dydx.png' link='https://dydx.exchange/'></Partnership>
+                <Partnership src='/zellic.svg' name='Zellic' link='https://www.zellic.io/'></Partnership>
             </div>
             <div className={styles.title}><h1>Past Sponsors</h1></div>
             <div className={styles.partnership_container}>
