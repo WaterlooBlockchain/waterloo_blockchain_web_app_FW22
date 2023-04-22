@@ -32,10 +32,10 @@ export default function Connect() {
               <FaInstagram></FaInstagram><a href='https://www.instagram.com/waterlooblockchain/' target="_blank" rel="noreferrer">@waterlooblockchain</a>
               </div>
               <div className={styles.contacts}>
-              <FaTwitter></FaTwitter><a href='https://twitter.com/waterlooblockchain' target="_blank" rel="noreferrer">@WaterlooBlockchain</a>
+              <FaTwitter></FaTwitter><a href='https://twitter.com/wlooblockchain' target="_blank" rel="noreferrer">@WaterlooBlockchain</a>
               </div>
               <div className={styles.contacts}>
-              <FaLinkedin></FaLinkedin><a href='https://www.linkedin.com/company/waterlooblockchain/' target="_blank" rel="noreferrer">Waterloo Blockchain</a>
+              <FaLinkedin></FaLinkedin><a href='https://www.linkedin.com/company/uwblockchainclub/' target="_blank" rel="noreferrer">Waterloo Blockchain</a>
               </div>
             </div>
             <h1 className={styles.partnership_title}>Past Partnerships</h1>
