@@ -29,6 +29,9 @@ export default function Home() {
                             <p className={styles.text}>
                                 Thursday, June 22, 2023 - Sunday, June 25, 2023
                             </p>
+                            <div className={styles.iframeContainer}>
+                                <iframe className={styles.iframe} src='https://ethglobal.tv'/>
+                            </div>
                         </div>
 
                         <h1 className={styles.text}>WORKSHOPS</h1>
