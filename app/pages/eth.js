@@ -38,6 +38,9 @@ export default function Home() {
                             <div className={styles.titleLogo}>
                                 <Image classname={styles.titleLogoImg} src="/ethglobal-waterloo-logo.svg" width={300} height={300} alt="EthLogo" layout="fixed"/>
                             </div>
+                            <div className={styles.iframeContainer}>
+                                <iframe className={styles.iframe} src='https://ethglobal.tv'/>
+                            </div>
                         </div>
 
                         <div className={styles.submissions}>

@@ -96,12 +96,12 @@ export default function Home() {
                 <h1>Current Sponsors</h1>
             </div>
             <div className={styles.sponsors}>
-                <Partnership src='/solana.svg' link='https://solana.com/'></Partnership>
+                <Partnership src='/SolanaFoundation.png' link='https://solana.com/'></Partnership>
                 <Partnership src='/jackal.svg' link='https://jackalprotocol.com/'></Partnership>
                 <Partnership src='/axelar.png' link='https://axelar.network/'></Partnership>
                 <Partnership src='/quantstamp.png' link='https://quantstamp.com/'></Partnership>
                 <Partnership src='/dydx.png' link='https://dydx.exchange/'></Partnership>
-                <Partnership src='/zellic.svg' name='Zellic' link='https://www.zellic.io/'></Partnership>
+                <Partnership src='/zellic.png' link='https://www.zellic.io/'></Partnership>
             </div>
             <div className={styles.title}><h1>Past Sponsors</h1></div>
             <div className={styles.partnership_container}>
