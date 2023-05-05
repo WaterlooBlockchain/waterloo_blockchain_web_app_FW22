@@ -36,24 +36,25 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className={styles.titleLogo}>
-                                <Image classname={styles.titleLogoImg} src="/ethglobal-waterloo-logo.svg" width={300} height={300} alt="EthLogo" layout="fixed"/>
+                                <Image className={styles.titleLogoImg} src="/ethglobal-waterloo-logo.svg" width={300} height={300} alt="EthLogo" layout="fixed"/>
                             </div>
-                            <div className={styles.iframeContainer}>
+                        </div>
+
+                        <div className={styles.iframeContainer}>
                                 <iframe className={styles.iframe} src='https://ethglobal.tv'/>
-                            </div>
                         </div>
 
                         <div className={styles.submissions}>
-                            <h1>Event Submissions</h1>
-                            <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit quam sed lobortis pulvinar. Sed pretium nec ligula a sodales. Donec vitae mattis nunc. Mauris nec porttitor risus.</p>
+                            <a className={styles.text} href='https://forms.gle/i8jNtD2RJQxTSM3d8'>Submit your event here.</a>
                         </div>
 
-                        <h1 className={styles.cardsBeginning}>WORKSHOPS</h1>
+                        <h1 className={styles.cardsBeginning}>Schedule</h1>
+                        <h2 className={styles.eventDay}>Thursday, June 22, 2023</h2>
                         <div className={styles.application}>
 
                         <div className={styles.starAndCard}>
                             <div className={styles.star}>
-                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                                <Image src="/star.svg" width={60} height={60} alt="Calendar" layout="fixed"/>
                             </div>
                             <div className={styles.cardDiv}>
                                 <Card
@@ -66,10 +67,10 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                        
+                        <h2 className={styles.eventDay}>Friday, June 23, 2023</h2>
                         <div className={styles.starAndCard}>
                             <div className={styles.star}>
-                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                                <Image src="/star.svg" width={60} height={60} alt="Calendar" layout="fixed"/>
                             </div>
                             <div className={styles.cardDiv}>
                             <Card
@@ -82,10 +83,10 @@ export default function Home() {
                             />
                             </div>
                         </div>
-
+                        <h2 className={styles.eventDay}>Saturday, June 24, 2023</h2>
                         <div className={styles.starAndCard}>
                             <div className={styles.star}>
-                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                                <Image src="/star.svg" width={60} height={60} alt="Calendar" layout="fixed"/>
                             </div>
                             <div className={styles.cardDiv}>
                                 <Card
@@ -101,7 +102,7 @@ export default function Home() {
 
                         <div className={styles.starAndCard}>
                             <div className={styles.star}>
-                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                                <Image src="/star.svg" width={60} height={60} alt="Calendar" layout="fixed"/>
                             </div>
                             <div className={styles.cardDiv}>
                                 <Card
@@ -114,10 +115,10 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-
+                        <h2 className={styles.eventDay}>Sunday, June 25, 2023</h2>
                         <div className={styles.starAndCard}>
                             <div className={styles.star}>
-                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                                <Image src="/star.svg" width={60} height={60} alt="Calendar" layout="fixed"/>
                             </div>
                             <div className={styles.cardDiv}>
                                 <Card
@@ -133,7 +134,7 @@ export default function Home() {
 
                         <div className={styles.starAndCard}>
                             <div className={styles.star}>
-                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                                <Image src="/star.svg" width={60} height={60} alt="Calendar" layout="fixed"/>
                             </div>
                             <div className={styles.cardDiv}>
                             <Card
@@ -149,7 +150,7 @@ export default function Home() {
 
                         <div className={styles.starAndCard}>
                             <div className={styles.star}>
-                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                                <Image src="/star.svg" width={60} height={60} alt="Calendar" layout="fixed"/>
                             </div>
                             <div className={styles.cardDiv}>
                             <Card

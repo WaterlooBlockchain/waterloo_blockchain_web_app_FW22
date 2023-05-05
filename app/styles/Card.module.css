@@ -55,6 +55,7 @@
   border-radius: 7px;
   display: flex;
   flex-direction: column;
+  border: 2px solid #F0E9FB;
 }
 
 .cardStatus p {
@@ -76,7 +77,7 @@
   }
 
   .cardStatus {
-    display: none;
+    padding-top: 1em;
   }
 
   .cardText h2 {
