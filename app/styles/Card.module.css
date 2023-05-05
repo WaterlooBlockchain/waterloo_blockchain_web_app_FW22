@@ -58,7 +58,7 @@
 }
 
 .cardStatus p {
-  transform: rotate(-90deg) translateX(calc(-285%));
+  transform: rotate(-90deg) translateX(calc(-270%));
   letter-spacing: 0.3em;
   font-family: 'Montserrat Light';
   font-size: 1.4vw;
@@ -68,4 +68,29 @@
 
 .line {
   border-bottom: 1px solid #D3BDF4;
+}
+
+@media (max-width: 640px) {
+  .card-image img {
+    display: none !important;
+  }
+
+  .cardStatus {
+    display: none;
+  }
+
+  .cardText h2 {
+    font-family: 'Montserrat Bold';
+    font-size: 2.2vw;
+  }
+
+  .cardText p {
+    font-family: 'Montserrat Light';
+    font-size: 1.5vw;
+  }
+
+  .cardImg {
+    width: 5 !important;
+    height: 5 !important;
+  }
 }

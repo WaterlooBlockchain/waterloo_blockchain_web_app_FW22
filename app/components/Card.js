@@ -17,8 +17,8 @@ const Card = ( props ) => {
         <h2>{props.title}</h2>
         <p className={styles.cardDescription}> {props.description}</p>
         <div className={styles.line}></div>
-        <p><Image src="/calendar-icon.png" width={13} height={13} alt="Calendar" layout="fixed"/> {props.date} {props.time}</p>
-        <p><Image src="/location-icon.png" width={13} height={13} alt="Location" layout="fixed"/>{props.location}</p>
+        <p><Image classname={styles.cardImg} src="/calendar-icon.png" width={13} height={13} alt="Calendar" layout="fixed"/> {props.date} {props.time}</p>
+        <p><Image classname={styles.cardImg} src="/location-icon.png" width={13} height={13} alt="Location" layout="fixed"/>{props.location}</p>
       </div>
       <div className={styles.cardStatus}>
         <p>{status}</p>

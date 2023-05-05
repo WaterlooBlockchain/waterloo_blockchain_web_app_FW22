@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/ETH.module.css'
+import React, { useState, useEffect } from 'react';
 
 //import components
 import Header from '../components/Header.js'
@@ -12,7 +13,7 @@ export default function Home() {
     return (
       <div className={styles.container}>
           <Head>
-              <title>ETHGlobal WATERLOO</title>
+              <title>ETHGLOBAL WATERLOO</title>
               <meta name="description" content="description..." />
               <meta name="viewport" content="width=device-width, initial-scale=1" />
               <link rel="icon" href="/uw_blockchain.png" />
@@ -23,26 +24,51 @@ export default function Home() {
                   <Header></Header>
                   <div className={styles.intro}>
                     <div >
-                        <div className={styles.titleContainer}>
-                            <h1 className={styles.ethtitle}>ETHGlobal</h1>
-                            <h1 className={styles.city}>WATERLOO</h1>
-                            <p className={styles.text}>
-                                Thursday, June 22, 2023 - Sunday, June 25, 2023
-                            </p>
+                        <div className={styles.titleWrapper}>
+                            <div className={styles.titleContainer}>
+                                <h1 className={styles.ethtitle}>ETHGlobal</h1>
+                                <h1 className={styles.city}>WATERLOO</h1>
+                                <p className={styles.textDate}>
+                                    Thursday, June 22, 2023 - Sunday, June 25, 2023
+                                </p>
+                                <p className={styles.text}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit quam sed lobortis pulvinar. Sed pretium nec ligula a sodales. Donec vitae mattis nunc. Mauris nec porttitor risus.
+                                </p>
+                            </div>
+                            <div className={styles.titleLogo}>
+                                <Image classname={styles.titleLogoImg} src="/ethglobal-waterloo-logo.svg" width={300} height={300} alt="EthLogo" layout="fixed"/>
+                            </div>
                         </div>
 
-                        <h1 className={styles.text}>WORKSHOPS</h1>
+                        <div className={styles.submissions}>
+                            <h1>Event Submissions</h1>
+                            <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit quam sed lobortis pulvinar. Sed pretium nec ligula a sodales. Donec vitae mattis nunc. Mauris nec porttitor risus.</p>
+                        </div>
+
+                        <h1 className={styles.cardsBeginning}>WORKSHOPS</h1>
                         <div className={styles.application}>
 
-                            <Card
-                                title="Workshop 1"
-                                description="Card description goes here"
-                                imageUrl="/uw_blockchain.png"
-                                date="June 24, 2023"
-                                time="@ Time AM/PM"
-                                location="Waterloo"
-                            />
-
+                        <div className={styles.starAndCard}>
+                            <div className={styles.star}>
+                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                            </div>
+                            <div className={styles.cardDiv}>
+                                <Card
+                                    title="Workshop 1"
+                                    description="Card description goes here"
+                                    imageUrl="/uw_blockchain.png"
+                                    date="June 24, 2023"
+                                    time="@ Time AM/PM"
+                                    location="Waterloo"
+                                />
+                            </div>
+                        </div>
+                        
+                        <div className={styles.starAndCard}>
+                            <div className={styles.star}>
+                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                            </div>
+                            <div className={styles.cardDiv}>
                             <Card
                                 title="Workshop 2"
                                 description="Card description goes here"
@@ -51,30 +77,62 @@ export default function Home() {
                                 time="@ Time AM/PM"
                                 location="Waterloo"
                             />
-                            <Card
-                                title="Workshop 3"
-                                description="Card description goes here"
-                                imageUrl="/uw_blockchain.png"
-                                date="June 24, 2023"
-                                time="@ Time AM/PM"
-                                location="Waterloo"
-                            />
-                            <Card
-                                title="Workshop 4"
-                                description="Card description goes here"
-                                imageUrl="/uw_blockchain.png"
-                                date="June 24, 2023"
-                                time="@ Time AM/PM"
-                                location="Waterloo"
-                            />
-                            <Card
-                                title="Workshop 5"
-                                description="Card description goes here"
-                                imageUrl="/uw_blockchain.png"
-                                date="June 24, 2023"
-                                time="@ Time AM/PM"
-                                location="Waterloo"
-                            />
+                            </div>
+                        </div>
+
+                        <div className={styles.starAndCard}>
+                            <div className={styles.star}>
+                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                            </div>
+                            <div className={styles.cardDiv}>
+                                <Card
+                                    title="Workshop 3"
+                                    description="Card description goes here"
+                                    imageUrl="/uw_blockchain.png"
+                                    date="June 24, 2023"
+                                    time="@ Time AM/PM"
+                                    location="Waterloo"
+                                />
+                            </div>
+                        </div>
+
+                        <div className={styles.starAndCard}>
+                            <div className={styles.star}>
+                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                            </div>
+                            <div className={styles.cardDiv}>
+                                <Card
+                                    title="Workshop 4"
+                                    description="Card description goes here"
+                                    imageUrl="/uw_blockchain.png"
+                                    date="June 24, 2023"
+                                    time="@ Time AM/PM"
+                                    location="Waterloo"
+                                />
+                            </div>
+                        </div>
+
+                        <div className={styles.starAndCard}>
+                            <div className={styles.star}>
+                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                            </div>
+                            <div className={styles.cardDiv}>
+                                <Card
+                                    title="Workshop 5"
+                                    description="Card description goes here"
+                                    imageUrl="/uw_blockchain.png"
+                                    date="June 24, 2023"
+                                    time="@ Time AM/PM"
+                                    location="Waterloo"
+                                />
+                            </div>
+                        </div>
+
+                        <div className={styles.starAndCard}>
+                            <div className={styles.star}>
+                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                            </div>
+                            <div className={styles.cardDiv}>
                             <Card
                                 title="Workshop 6"
                                 description="Card description goes here"
@@ -83,6 +141,14 @@ export default function Home() {
                                 time="@ Time AM/PM"
                                 location="Waterloo"
                             />
+                            </div>
+                        </div>
+
+                        <div className={styles.starAndCard}>
+                            <div className={styles.star}>
+                                <Image src="/white-star-icon.png" width={60} height={60} alt="Calendar" layout="fixed"/>
+                            </div>
+                            <div className={styles.cardDiv}>
                             <Card
                                 title="Workshop 7"
                                 description="Card description goes here"
@@ -91,6 +157,8 @@ export default function Home() {
                                 time="@ Time AM/PM"
                                 location="Waterloo"
                             />
+                            </div>
+                        </div>
 
                         </div>
                     </div>
