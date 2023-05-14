@@ -32,7 +32,10 @@ export default function Home() {
                                     Thursday, June 22, 2023 - Sunday, June 25, 2023
                                 </p>
                                 <p className={styles.text}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit quam sed lobortis pulvinar. Sed pretium nec ligula a sodales. Donec vitae mattis nunc. Mauris nec porttitor risus.
+                                    Waterloo Blockchain is proud to be an official community partner of ETHGlobal Waterloo.
+                                </p>
+                                <p className={styles.text}>
+                                    As a community partner, we will be holding a booth, hosting side events, and co-hosting workshops running up to the hackathon.
                                 </p>
                             </div>
                             <div className={styles.titleLogo}>
