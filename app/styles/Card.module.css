@@ -1,0 +1,97 @@
+.card {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 16px;
+  padding: 1rem 1rem 1rem 0;
+  background-color: #F0E9FB;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.cardImage {
+  flex: 1;
+  float: right;
+  text-align: right;
+  margin-left: 16px;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cardText {
+  flex: 1;
+  color: #180831;
+  text-shadow: none;
+  margin-left: 10%;
+}
+
+.cardText h2 {
+  font-family: 'Montserrat Bold';
+}
+
+.cardText p {
+  font-family: 'Montserrat Light';
+}
+
+.cardDescription {
+  font-family: 'Montserrat Bold';
+  font-size: 1.2vw;
+}
+
+.cardStatus {
+  width: 7%;
+  background-color: #7A3ADF;
+  position: absolute;
+  height: 100.8%;
+  top:-0.1;
+  left: 0;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #F0E9FB;
+}
+
+.cardStatus p {
+  transform: rotate(-90deg) translateX(calc(-270%));
+  letter-spacing: 0.3em;
+  font-family: 'Montserrat Light';
+  font-size: 1.4vw;
+  position: relative;
+  bottom: 0;
+}
+
+.line {
+  border-bottom: 1px solid #D3BDF4;
+}
+
+@media (max-width: 640px) {
+  .card-image img {
+    display: none !important;
+  }
+
+  .cardStatus {
+    padding-top: 1em;
+  }
+
+  .cardText h2 {
+    font-family: 'Montserrat Bold';
+    font-size: 2.2vw;
+  }
+
+  .cardText p {
+    font-family: 'Montserrat Light';
+    font-size: 1.5vw;
+  }
+
+  .cardImg {
+    width: 5 !important;
+    height: 5 !important;
+  }
+}
