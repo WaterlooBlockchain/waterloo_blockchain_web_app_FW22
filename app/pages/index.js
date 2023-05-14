@@ -19,8 +19,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>UW Blockchain</title>
-        <meta name="description" content="University of Waterloo Blockchain Club" />
+        <title>Waterloo Blockchain</title>
+        <meta name="description" content="Waterloo Blockchain is a non-profit student run organization at the University of Waterloo." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/uw_blockchain.png" />
       </Head>
