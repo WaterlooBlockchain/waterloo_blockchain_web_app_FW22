@@ -23,7 +23,7 @@ export default function Connect() {
             <h1 className={styles.title}>Contact UW Blockchain Club</h1>
             <div className={styles.contact_container}>
               <div className={styles.contacts}>
-              <FaEnvelope></FaEnvelope><p>uwaterlooblockchain@gmail.com</p>
+              <FaEnvelope></FaEnvelope><p>contact@waterlooblockchain.ca</p>
               </div>
               <div className={styles.contacts}>
               <FaDiscord></FaDiscord><a href='https://discord.gg/PW9HjVp4G6' target="_blank" rel="noreferrer">Join Discord</a>

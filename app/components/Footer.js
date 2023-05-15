@@ -12,7 +12,7 @@ const Footer = () => {
                     <Image src='/uw_blockchain.png' width={63} height={72} layout={'responsive'}></Image>
                 </div>
                 <div className={styles.text}>
-                    <p className={styles.uwaterloo}>UWaterloo</p>
+                    <p className={styles.uwaterloo}>Waterloo</p>
                     <div className={styles.line}>
                         <h1 className={styles.blockchain}>Blockchain</h1>
                         <p className={styles.c}>© 2022</p>
@@ -20,8 +20,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className={styles.socials}>
-                <div className={styles.socials_button}><a href='https://mobile.twitter.com/uw_blockchain' target="_blank" rel="noreferrer"><FaTwitter className={styles.icons} /></a></div>
-                <div className={styles.socials_button}><a href='https://www.instagram.com/blockchainuw/' target="_blank" rel="noreferrer"><FaInstagram className={styles.icons} /></a></div>
+                <div className={styles.socials_button}><a href='https://twitter.com/wlooblockchain' target="_blank" rel="noreferrer"><FaTwitter className={styles.icons} /></a></div>
+                <div className={styles.socials_button}><a href='https://www.instagram.com/waterlooblockchain/' target="_blank" rel="noreferrer"><FaInstagram className={styles.icons} /></a></div>
                 <div className={styles.socials_button}><a href='https://www.linkedin.com/company/uwblockchainclub/?originalSubdomain=ch' target="_blank" rel="noreferrer"><FaLinkedin className={styles.icons} /></a></div>
                 <div className={styles.socials_button}><a href='https://discord.gg/YCBA3n7Xn8' target="_blank" rel="noreferrer"><FaDiscord className={styles.icons} /></a></div>
             </div>
